@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import math
 from math import sin, cos, pi
@@ -22,9 +22,9 @@ class odom_task():
         self.x = 0.0
         self.y = 0.0
         self.th = 0.0 #theta
-        self.wz=0.0
+        self.wz=1.0
         self.v=0.0
-        self.vx=0.0
+        self.vx=1.0
         self.vy=0.0
         self.dt=0.01
 
@@ -33,7 +33,7 @@ class odom_task():
 
 
         #Publishers
-        self.odom_pub = rospy.Publisher("odom_custom", Odometry, queue_size=50)
+        self.odom_pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=50)
 
         #Subscribers
 
@@ -74,6 +74,15 @@ class odom_task():
     )
     #Publish data to topic
     def publish(self):
+
+        # vel = Twist()
+        # vel.linear.x = self.vx
+        # vel.linear.y = self.vy
+        # vel.linear.z = 0
+
+        # vel.angular.x = 0
+        # vel.angular.y = 0
+        # vel.angular.z = self.wz
         odom = Odometry() 
         odom.header.stamp = self.current_time
         odom.header.frame_id = "odom"
@@ -86,7 +95,7 @@ class odom_task():
         odom.twist.twist = Twist(Vector3(self.vx, self.vy, 0), Vector3(0, 0, self.wz))
 
         # publish the message
-        self.odom_pub.publish(odom)
+        self.odom_pub.publish(odom.twist.twist)
 
 
 
