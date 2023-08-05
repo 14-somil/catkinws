@@ -665,6 +665,15 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 
+//Path to a file.
+PYTHON_INCLUDE_DIR:PATH=/usr/include/python3.8
+
+//Path to a library.
+PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.8.so
+
+//Path to a library.
+PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=3
 
@@ -745,6 +754,9 @@ ZeroMQ_DIR:PATH=ZeroMQ_DIR-NOTFOUND
 
 //Path to a library.
 ZeroMQ_LIBRARY_zmq:FILEPATH=/usr/lib/x86_64-linux-gnu/libzmq.so
+
+//Path to a file.
+_file_name:FILEPATH=/home/somil/catkin_ws/src/rosserial/rosserial_test/test/rosserial_python_socket.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/src/googletest/googlemock/include/gmock/gmock.h
@@ -1011,6 +1023,114 @@ rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 
+//Value Computed by CMake
+rosserial_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial
+
+//Value Computed by CMake
+rosserial_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial
+
+//Value Computed by CMake
+rosserial_arduino_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_arduino
+
+//Value Computed by CMake
+rosserial_arduino_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_arduino
+
+//Value Computed by CMake
+rosserial_chibios_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_chibios
+
+//Value Computed by CMake
+rosserial_chibios_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_chibios
+
+//Value Computed by CMake
+rosserial_client_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_client
+
+//The directory containing a CMake configuration file for rosserial_client.
+rosserial_client_DIR:PATH=/home/somil/catkin_ws/devel/share/rosserial_client/cmake
+
+//Value Computed by CMake
+rosserial_client_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_client
+
+//Value Computed by CMake
+rosserial_embeddedlinux_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_embeddedlinux
+
+//Value Computed by CMake
+rosserial_embeddedlinux_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_embeddedlinux
+
+//Value Computed by CMake
+rosserial_mbed_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_mbed
+
+//Value Computed by CMake
+rosserial_mbed_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_mbed
+
+//Value Computed by CMake
+rosserial_msgs_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_msgs
+
+//The directory containing a CMake configuration file for rosserial_msgs.
+rosserial_msgs_DIR:PATH=/home/somil/catkin_ws/devel/share/rosserial_msgs/cmake
+
+//Value Computed by CMake
+rosserial_msgs_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_msgs
+
+//Value Computed by CMake
+rosserial_python_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_python
+
+//The directory containing a CMake configuration file for rosserial_python.
+rosserial_python_DIR:PATH=/home/somil/catkin_ws/devel/share/rosserial_python/cmake
+
+//Value Computed by CMake
+rosserial_python_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_python
+
+//Value Computed by CMake
+rosserial_server_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_server
+
+//The directory containing a CMake configuration file for rosserial_server.
+rosserial_server_DIR:PATH=/home/somil/catkin_ws/devel/share/rosserial_server/cmake
+
+//Value Computed by CMake
+rosserial_server_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_server
+
+//Dependencies for the target
+rosserial_server_lookup_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;
+
+//Value Computed by CMake
+rosserial_test_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_test
+
+//Value Computed by CMake
+rosserial_test_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_test
+
+//Value Computed by CMake
+rosserial_tivac_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_tivac
+
+//Value Computed by CMake
+rosserial_tivac_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_tivac
+
+//Value Computed by CMake
+rosserial_vex_cortex_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_vex_cortex
+
+//Value Computed by CMake
+rosserial_vex_cortex_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_vex_cortex
+
+//Value Computed by CMake
+rosserial_vex_v5_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_vex_v5
+
+//Value Computed by CMake
+rosserial_vex_v5_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_vex_v5
+
+//Value Computed by CMake
+rosserial_windows_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_windows
+
+//Value Computed by CMake
+rosserial_windows_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_windows
+
+//Value Computed by CMake
+rosserial_xbee_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/rosserial/rosserial_xbee
+
+//Value Computed by CMake
+rosserial_xbee_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/rosserial/rosserial_xbee
+
+//The directory containing a CMake configuration file for rostest.
+rostest_DIR:PATH=/opt/ros/noetic/share/rostest/cmake
+
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
@@ -1040,6 +1160,9 @@ tf2_ros_DIR:PATH=/opt/ros/noetic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
+
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/opt/ros/noetic/share/topic_tools/cmake
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
@@ -1256,7 +1379,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1309,7 +1432,7 @@ CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 DART_DEFINITIONS:INTERNAL=
 DART_INCLUDE_DIRS:INTERNAL=/usr/include
-DART_LIBRARIES:INTERNAL=dart;dart
+DART_LIBRARIES:INTERNAL=dart;dart;dart;dart;dart;dart;dart
 //Boost min version requirement
 DART_MIN_BOOST_VERSION:INTERNAL=1.58.0
 DART_dart_DEFINITIONS:INTERNAL=
@@ -1326,7 +1449,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boo
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v7.68.0()]
 //Details about finding DART
-FIND_PACKAGE_MESSAGE_DETAILS_DART:INTERNAL=[/usr/include][dart;dart][cfound components: dart ][v(6.6)]
+FIND_PACKAGE_MESSAGE_DETAILS_DART:INTERNAL=[/usr/include][dart;dart;dart;dart;dart;dart;dart][cfound components: dart ][v(6.6)]
 //Details about finding DL
 FIND_PACKAGE_MESSAGE_DETAILS_DL:INTERNAL=[true][v()]
 //Details about finding JSONCPP
@@ -1339,6 +1462,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread][/usr/include][v3.6.1(3)]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.10()]
+//Details about finding PythonLibs
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython3.8.so][/usr/include/python3.8][v3.8.10()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding UUID
@@ -1756,10 +1881,16 @@ PC_FCL_fcl_VERSION:INTERNAL=
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_INCLUDE_DIR
+PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python3/dist-packages
+//ADVANCED property for variable: PYTHON_LIBRARY
+PYTHON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
+PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Protobuf_INCLUDE_DIR
 Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
