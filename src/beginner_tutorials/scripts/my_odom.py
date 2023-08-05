@@ -26,10 +26,13 @@ class odom_task:
     
     def odomCallback(self, msg):
 
-        phi = (math.pi + msg.angular.z * self.dt)/2
-        delta_x = (msg.linear.x * self.dt) * math.sin(phi + self.th - (math.pi /2))
-        delta_y = (msg.linear.x * self.dt) * math.cos(phi + self.th - (math.pi /2))
-        delta_th = msg.angular.z * self.dt
+        # phi = (math.pi + msg.angular.z * self.dt)/2
+        # delta_x = (msg.linear.x * self.dt) * math.sin(phi + self.th - (math.pi /2))
+        # delta_y = (msg.linear.x * self.dt) * math.cos(phi + self.th - (math.pi /2))
+        # delta_th = msg.angular.z * self.dt
+        delta_x = msg.linear.x * self.dt * math.cos(self.th) *10
+        delta_y = msg.linear.x * self.dt * math.sin(self.th) *10
+        delta_th = msg.angular.z * self.dt * 10
 
         self.x += delta_x
         self.y += delta_y
