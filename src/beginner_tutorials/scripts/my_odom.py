@@ -18,8 +18,8 @@ class odom_task:
         self.x=0
         self.y=0
         self.th=0
-        self.sample_rate=100
-        self.dt = 0.01
+        self.sample_rate=10
+        self.dt = 0.1
 
         #subcriber
         rospy.Subscriber("/cmd_vel", Twist, self.odomCallback)
@@ -30,9 +30,9 @@ class odom_task:
         # delta_x = (msg.linear.x * self.dt) * math.sin(phi + self.th - (math.pi /2))
         # delta_y = (msg.linear.x * self.dt) * math.cos(phi + self.th - (math.pi /2))
         # delta_th = msg.angular.z * self.dt
-        delta_x = msg.linear.x * self.dt * math.cos(self.th) *10
-        delta_y = msg.linear.x * self.dt * math.sin(self.th) *10
-        delta_th = msg.angular.z * self.dt * 10
+        delta_x = msg.linear.x * self.dt * math.cos(self.th) 
+        delta_y = msg.linear.x * self.dt * math.sin(self.th) 
+        delta_th = msg.angular.z * self.dt 
 
         self.x += delta_x
         self.y += delta_y
