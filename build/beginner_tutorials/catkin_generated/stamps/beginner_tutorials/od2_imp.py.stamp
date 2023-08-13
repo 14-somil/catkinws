@@ -56,7 +56,7 @@ class odom_task():
         self.odom_quat[1]=data.pose.pose.orientation.y
         self.odom_quat[2]=data.pose.pose.orientation.z
         self.odom_quat[3]=data.pose.pose.orientation.w
-        rospy.loginfo("x=%f , y=%f", self.x, self.y)
+        rospy.loginfo("x=%f , y=%f, th=", self.x, self.y)
 
 
         

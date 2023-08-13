@@ -161,7 +161,6 @@ include_directories(
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(
   PROGRAMS 
-  scripts/
   scripts/talker.py 
   scripts/listener.py
   scripts/add_two_ints_server.py
