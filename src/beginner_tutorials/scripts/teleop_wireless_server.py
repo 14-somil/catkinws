@@ -30,7 +30,7 @@ while 1:
         print(f"connected to {address}")
 
         while not rospy.is_shutdown():
-
+            
             message = communication_socket.recv(1024).decode('utf-8')
             rospy.loginfo(message)
             msg = Char(ord(message))
@@ -41,7 +41,7 @@ while 1:
         server.close()
         break
 
-    except:
+    except BrokenPipeError:
         pass
 
 

@@ -162,7 +162,7 @@ include_directories(
 catkin_install_python(
   PROGRAMS
   scripts/teleop_ps3_v2.py
-  scripts/teleop_wireless.py
+  scripts/teleop_wireless_server.py
   scripts/teleop_ps3.py
   scripts/teleop.py
   scripts/d_turtlesim.py
