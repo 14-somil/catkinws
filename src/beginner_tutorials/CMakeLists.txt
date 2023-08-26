@@ -160,7 +160,12 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(
-  PROGRAMS 
+  PROGRAMS
+  scripts/teleop_ps3_v2.py
+  scripts/teleop_wireless.py
+  scripts/teleop_ps3.py
+  scripts/teleop.py
+  scripts/d_turtlesim.py
   scripts/talker.py 
   scripts/listener.py
   scripts/add_two_ints_server.py
@@ -225,3 +230,7 @@ add_dependencies(add_two_ints_server beginner_tutorials_gencpp)
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
+
+add_executable(teleop src/teleop.cpp)
+target_link_libraries(teleop ${catkin_LIBRARIES})
+add_dependencies(teleop std_msgs_generate_messages_cpp)
