@@ -124,17 +124,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/somil/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/somil/catkin_ws/build/CMakeFiles /home/somil/catkin_ws/build/rosserial/rosserial_mbed/CMakeFiles/progress.marks
@@ -386,7 +375,6 @@ help:
 	@echo "... rosserial_mbed_generate_messages"
 	@echo "... rosserial_mbed_generate_messages_eus"
 	@echo "... rosserial_mbed_genlisp"
-	@echo "... test"
 	@echo "... rosserial_mbed_genpy"
 .PHONY : help
 

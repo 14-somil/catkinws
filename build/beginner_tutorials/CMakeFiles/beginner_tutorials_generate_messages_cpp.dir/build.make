@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/somil/catkin_ws/build
 include beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/progress.make
 
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/Num.h
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/anglesMsg.h
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/angles.h
 
 
 /home/somil/catkin_ws/devel/include/beginner_tutorials/Num.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -63,16 +65,31 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp: /home/so
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from beginner_tutorials/Num.msg"
 	cd /home/somil/catkin_ws/src/beginner_tutorials && /home/somil/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/include/beginner_tutorials -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/somil/catkin_ws/devel/include/beginner_tutorials/anglesMsg.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/somil/catkin_ws/devel/include/beginner_tutorials/anglesMsg.h: /home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg
+/home/somil/catkin_ws/devel/include/beginner_tutorials/anglesMsg.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from beginner_tutorials/anglesMsg.msg"
+	cd /home/somil/catkin_ws/src/beginner_tutorials && /home/somil/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/include/beginner_tutorials -e /opt/ros/noetic/share/gencpp/cmake/..
+
 /home/somil/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/somil/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h: /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv
 /home/somil/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/somil/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from beginner_tutorials/AddTwoInts.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from beginner_tutorials/AddTwoInts.srv"
 	cd /home/somil/catkin_ws/src/beginner_tutorials && /home/somil/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/include/beginner_tutorials -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/somil/catkin_ws/devel/include/beginner_tutorials/angles.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/somil/catkin_ws/devel/include/beginner_tutorials/angles.h: /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv
+/home/somil/catkin_ws/devel/include/beginner_tutorials/angles.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/somil/catkin_ws/devel/include/beginner_tutorials/angles.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from beginner_tutorials/angles.srv"
+	cd /home/somil/catkin_ws/src/beginner_tutorials && /home/somil/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/include/beginner_tutorials -e /opt/ros/noetic/share/gencpp/cmake/..
 
 beginner_tutorials_generate_messages_cpp: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp
 beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/Num.h
+beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/anglesMsg.h
 beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h
+beginner_tutorials_generate_messages_cpp: /home/somil/catkin_ws/devel/include/beginner_tutorials/angles.h
 beginner_tutorials_generate_messages_cpp: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/build.make
 
 .PHONY : beginner_tutorials_generate_messages_cpp

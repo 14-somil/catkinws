@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/somil/catkin_ws/build
 include beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus.dir/progress.make
 
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg/Num.l
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg/anglesMsg.l
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/AddTwoInts.l
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/angles.l
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/manifest.l
 
 
@@ -63,18 +65,30 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus: /home/so
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from beginner_tutorials/Num.msg"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg
 
+/home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg/anglesMsg.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg/anglesMsg.l: /home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from beginner_tutorials/anglesMsg.msg"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg
+
 /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/AddTwoInts.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/AddTwoInts.l: /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from beginner_tutorials/AddTwoInts.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from beginner_tutorials/AddTwoInts.srv"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv
 
+/home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/angles.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/angles.l: /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from beginner_tutorials/angles.srv"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv
+
 /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for beginner_tutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for beginner_tutorials"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials beginner_tutorials std_msgs
 
 beginner_tutorials_generate_messages_eus: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus
 beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg/Num.l
+beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/msg/anglesMsg.l
 beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/AddTwoInts.l
+beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/angles.l
 beginner_tutorials_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/beginner_tutorials/manifest.l
 beginner_tutorials_generate_messages_eus: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus.dir/build.make
 

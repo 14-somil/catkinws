@@ -51,12 +51,14 @@ find_package(catkin REQUIRED COMPONENTS
  add_message_files(
    FILES
    Num.msg
+   anglesMsg.msg
  )
 
 ## Generate services in the 'srv' folder
  add_service_files(
    FILES
    AddTwoInts.srv
+   angles.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -161,6 +163,12 @@ include_directories(
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(
   PROGRAMS
+  scripts/inverse.py
+  scripts/test.py
+  scripts/test2.py
+  scripts/test3.py
+  scripts/test4.py
+  scripts/robotic_arm_ps3.py
   scripts/teleop_ps3_v2.py
   scripts/teleop_wireless_server.py
   scripts/teleop_ps3.py
@@ -171,6 +179,7 @@ catkin_install_python(
   scripts/add_two_ints_server.py
   scripts/add_two_ints_client.py
   scripts/od2_imp.py
+  scripts/inverse_using_msg.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

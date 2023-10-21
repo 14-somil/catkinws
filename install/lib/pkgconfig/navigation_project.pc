@@ -1,0 +1,8 @@
+prefix=/home/somil/catkin_ws/install
+
+Name: navigation_project
+Description: Description of navigation_project
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

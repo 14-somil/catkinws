@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_Num.py"
   "/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py"
+  "/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_anglesMsg.py"
   "/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_AddTwoInts.py"
   "/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py"
+  "/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_angles.py"
   "CMakeFiles/beginner_tutorials_generate_messages_py"
 )
 

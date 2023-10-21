@@ -1,0 +1,2 @@
+joystick.quit()
+    pygame.quit()

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "beginner_tutorials: 1 messages, 1 services")
+message(STATUS "beginner_tutorials: 2 messages, 2 services")
 
 set(MSG_I_FLAGS "-Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,9 +22,19 @@ add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg" ""
 )
 
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg" NAME_WE)
+add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg" ""
+)
+
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
 add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" ""
+)
+
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv" NAME_WE)
+add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv" ""
 )
 
 #
@@ -39,10 +49,22 @@ _generate_msg_cpp(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_cpp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_cpp(beginner_tutorials
   "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
+)
+_generate_srv_cpp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
@@ -62,7 +84,11 @@ add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generat
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -80,10 +106,22 @@ _generate_msg_eus(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_eus(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_eus(beginner_tutorials
   "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
+)
+_generate_srv_eus(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
@@ -103,7 +141,11 @@ add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generat
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -121,10 +163,22 @@ _generate_msg_lisp(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_lisp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_lisp(beginner_tutorials
   "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
+)
+_generate_srv_lisp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
@@ -144,7 +198,11 @@ add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generat
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -162,10 +220,22 @@ _generate_msg_nodejs(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_nodejs(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_nodejs(beginner_tutorials
   "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
+)
+_generate_srv_nodejs(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
@@ -185,7 +255,11 @@ add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generat
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,10 +277,22 @@ _generate_msg_py(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_py(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_py(beginner_tutorials
   "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
+)
+_generate_srv_py(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
@@ -226,7 +312,11 @@ add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generat
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
