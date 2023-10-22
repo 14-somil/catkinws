@@ -27,16 +27,13 @@ if __name__ == "__main__":
 
     robot = RobotSerial(dh_params) 
 
-    rospy.init_node('Visual_kinematics', anonymous=True)
+    rospy.init_node('Visual_kinematics')
     pub = rospy.Publisher('/angles', anglesMsg, queue_size=10)
 
-    x=int(sys.argv[1])
-    y=int(sys.argv[2])
-    z=int(sys.argv[3])
+    x=int(input('Enter x '))
+    y=int(input('Enter y '))
+    z=int(input('Enter z '))
 
     base, first, second=ik(x,y,z)
 
     msg = anglesMsg(int(first), int(second), int(base))
-    pub.publish(msg)
-
-    rospy.spin()

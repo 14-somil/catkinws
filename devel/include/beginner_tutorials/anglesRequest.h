@@ -26,12 +26,18 @@ struct anglesRequest_
   anglesRequest_()
     : first(0)
     , second(0)
-    , base(0)  {
+    , base(0)
+    , servo1(0)
+    , servo2(0)
+    , isSlow(false)  {
     }
   anglesRequest_(const ContainerAllocator& _alloc)
     : first(0)
     , second(0)
-    , base(0)  {
+    , base(0)
+    , servo1(0)
+    , servo2(0)
+    , isSlow(false)  {
   (void)_alloc;
     }
 
@@ -45,6 +51,15 @@ struct anglesRequest_
 
    typedef int64_t _base_type;
   _base_type base;
+
+   typedef int64_t _servo1_type;
+  _servo1_type servo1;
+
+   typedef int64_t _servo2_type;
+  _servo2_type servo2;
+
+   typedef uint8_t _isSlow_type;
+  _isSlow_type isSlow;
 
 
 
@@ -77,7 +92,10 @@ bool operator==(const ::beginner_tutorials::anglesRequest_<ContainerAllocator1> 
 {
   return lhs.first == rhs.first &&
     lhs.second == rhs.second &&
-    lhs.base == rhs.base;
+    lhs.base == rhs.base &&
+    lhs.servo1 == rhs.servo1 &&
+    lhs.servo2 == rhs.servo2 &&
+    lhs.isSlow == rhs.isSlow;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -134,12 +152,12 @@ struct MD5Sum< ::beginner_tutorials::anglesRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "0496e8c0c35c632938a659f27c1ce0a3";
+    return "9cb918e313d93f1f1b66c65d5100a33d";
   }
 
   static const char* value(const ::beginner_tutorials::anglesRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x0496e8c0c35c6329ULL;
-  static const uint64_t static_value2 = 0x38a659f27c1ce0a3ULL;
+  static const uint64_t static_value1 = 0x9cb918e313d93f1fULL;
+  static const uint64_t static_value2 = 0x1b66c65d5100a33dULL;
 };
 
 template<class ContainerAllocator>
@@ -161,6 +179,9 @@ struct Definition< ::beginner_tutorials::anglesRequest_<ContainerAllocator> >
     return "int64 first\n"
 "int64 second\n"
 "int64 base\n"
+"int64 servo1\n"
+"int64 servo2\n"
+"bool isSlow\n"
 ;
   }
 
@@ -182,6 +203,9 @@ namespace serialization
       stream.next(m.first);
       stream.next(m.second);
       stream.next(m.base);
+      stream.next(m.servo1);
+      stream.next(m.servo2);
+      stream.next(m.isSlow);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -206,6 +230,12 @@ struct Printer< ::beginner_tutorials::anglesRequest_<ContainerAllocator> >
     Printer<int64_t>::stream(s, indent + "  ", v.second);
     s << indent << "base: ";
     Printer<int64_t>::stream(s, indent + "  ", v.base);
+    s << indent << "servo1: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.servo1);
+    s << indent << "servo2: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.servo2);
+    s << indent << "isSlow: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.isSlow);
   }
 };
 

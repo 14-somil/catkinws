@@ -5,6 +5,12 @@
           SECOND
           BASE-VAL
           BASE
+          SERVO1-VAL
+          SERVO1
+          SERVO2-VAL
+          SERVO2
+          ISSLOW-VAL
+          ISSLOW
           CHECK-VAL
           CHECK
 ))

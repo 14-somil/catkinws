@@ -6,7 +6,7 @@ from math import pi
 import pygame
 import time
 import rospy
-from beginner_tutorials.srv import *
+from beginner_tutorials.srv import angles
 
 x=0
 y=60
@@ -35,21 +35,45 @@ z=10
 def forward():
     
     global x,y,z
-    y = y+1
+    y = y+5
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base))
+    resp1 = request(int(first), int(second), int(base), 0, 0)
+    print(resp1.check)
     return resp1.check
 
 def backward():
 
     global x,y,z
-    y = y-1
+    y = y-5
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base))
+    resp1 = request(int(first), int(second), int(base), 0, 0)
+    print(resp1.check)
+    return resp1.check
+
+def up():
+    
+    global x,y,z
+    z = z+5
+
+    base, first, second=ik(x,y,z)
+
+    resp1 = request(int(first), int(second), int(base), 0, 0)
+    print(resp1.check)
+    return resp1.check
+
+def down():
+
+    global x,y,z
+    z = z-5
+
+    base, first, second=ik(x,y,z)
+
+    resp1 = request(int(first), int(second), int(base), 0, 0)
+    print(resp1.check)
     return resp1.check
 
 
@@ -99,20 +123,21 @@ if __name__ == "__main__":
         while not rospy.is_shutdown():
             pygame.event.pump()
             axis_1 = joystick.get_axis(1)
+            axis_2 = joystick.get_axis(4)
 
             exit_button = joystick.get_button(0)
 
-            if(axis_1 > 0.1 or axis_1 < -0.1 or exit_button==1):
+            if(axis_1 > 0.1 or axis_1 < -0.1 or axis_2 > 0.1 or axis_2 < -0.1 or exit_button==1):
                
                 if(not isButtonPressed):
                     if (exit_button == 1):
-                        print("Shutting down")
                         print('x')
+                        print("Shutting down")
                         joystick.quit()
                         pygame.quit()
                         break
 
-                    if(axis_1 < -0.5 and Button != 'a'):
+                    if(axis_1 < -0.5):
                         print('a')
                         forward()
                         while 1:
@@ -124,8 +149,8 @@ if __name__ == "__main__":
                                 time.sleep(0.1)
                             else:
                                 break
-                    elif(axis_1 > 0.5 and Button != 'a'):
-                        print('a')
+                    elif(axis_1 > 0.5):
+                        print('z')
                         backward()
                         while 1:
                             pygame.event.pump()
@@ -133,6 +158,30 @@ if __name__ == "__main__":
                             if(axis_1 > +0.5):
                                 print('z')
                                 backward()
+                                time.sleep(0.1)
+                            else:
+                                break
+                    elif(axis_2 < -0.5):
+                        print('s')
+                        up()
+                        while 1:
+                            pygame.event.pump()
+                            axis_2 = joystick.get_axis(4)
+                            if(axis_2 < -0.5):
+                                print('s')
+                                up()
+                                time.sleep(0.1)
+                            else:
+                                break
+                    elif(axis_2 > 0.5 ):
+                        print('x')
+                        down()
+                        while 1:
+                            pygame.event.pump()
+                            axis_2 = joystick.get_axis(4)
+                            if(axis_2 > +0.5):
+                                print('x')
+                                down()
                                 time.sleep(0.1)
                             else:
                                 break

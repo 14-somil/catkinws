@@ -14,6 +14,6 @@ def callback(msg):
 
 if __name__ == "__main__":
     rospy.init_node('Test', anonymous=True)
-    rospy.Subscriber('chatter', anglesMsg, callback)
+    rospy.Subscriber('/angles', anglesMsg, callback)
 
     rospy.spin()

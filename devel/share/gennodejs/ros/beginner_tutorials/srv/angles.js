@@ -24,6 +24,9 @@ class anglesRequest {
       this.first = null;
       this.second = null;
       this.base = null;
+      this.servo1 = null;
+      this.servo2 = null;
+      this.isSlow = null;
     }
     else {
       if (initObj.hasOwnProperty('first')) {
@@ -44,6 +47,24 @@ class anglesRequest {
       else {
         this.base = 0;
       }
+      if (initObj.hasOwnProperty('servo1')) {
+        this.servo1 = initObj.servo1
+      }
+      else {
+        this.servo1 = 0;
+      }
+      if (initObj.hasOwnProperty('servo2')) {
+        this.servo2 = initObj.servo2
+      }
+      else {
+        this.servo2 = 0;
+      }
+      if (initObj.hasOwnProperty('isSlow')) {
+        this.isSlow = initObj.isSlow
+      }
+      else {
+        this.isSlow = false;
+      }
     }
   }
 
@@ -55,6 +76,12 @@ class anglesRequest {
     bufferOffset = _serializer.int64(obj.second, buffer, bufferOffset);
     // Serialize message field [base]
     bufferOffset = _serializer.int64(obj.base, buffer, bufferOffset);
+    // Serialize message field [servo1]
+    bufferOffset = _serializer.int64(obj.servo1, buffer, bufferOffset);
+    // Serialize message field [servo2]
+    bufferOffset = _serializer.int64(obj.servo2, buffer, bufferOffset);
+    // Serialize message field [isSlow]
+    bufferOffset = _serializer.bool(obj.isSlow, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -68,11 +95,17 @@ class anglesRequest {
     data.second = _deserializer.int64(buffer, bufferOffset);
     // Deserialize message field [base]
     data.base = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [servo1]
+    data.servo1 = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [servo2]
+    data.servo2 = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [isSlow]
+    data.isSlow = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 24;
+    return 41;
   }
 
   static datatype() {
@@ -82,7 +115,7 @@ class anglesRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '0496e8c0c35c632938a659f27c1ce0a3';
+    return '9cb918e313d93f1f1b66c65d5100a33d';
   }
 
   static messageDefinition() {
@@ -91,6 +124,9 @@ class anglesRequest {
     int64 first
     int64 second
     int64 base
+    int64 servo1
+    int64 servo2
+    bool isSlow
     
     `;
   }
@@ -120,6 +156,27 @@ class anglesRequest {
     }
     else {
       resolved.base = 0
+    }
+
+    if (msg.servo1 !== undefined) {
+      resolved.servo1 = msg.servo1;
+    }
+    else {
+      resolved.servo1 = 0
+    }
+
+    if (msg.servo2 !== undefined) {
+      resolved.servo2 = msg.servo2;
+    }
+    else {
+      resolved.servo2 = 0
+    }
+
+    if (msg.isSlow !== undefined) {
+      resolved.isSlow = msg.isSlow;
+    }
+    else {
+      resolved.isSlow = false
     }
 
     return resolved;
@@ -201,6 +258,6 @@ class anglesResponse {
 module.exports = {
   Request: anglesRequest,
   Response: anglesResponse,
-  md5sum() { return '644940150eafdcd9dda035c968198107'; },
+  md5sum() { return 'd61f65b1d41fa5ce5b8822fbdbff89c7'; },
   datatype() { return 'beginner_tutorials/angles'; }
 };

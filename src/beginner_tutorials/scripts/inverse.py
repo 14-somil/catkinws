@@ -39,7 +39,7 @@ def forward():
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base))
+    resp1 = request(int(first), int(second), int(base), 0, 0)
     print(resp1.check)
     return resp1.check
 
@@ -50,7 +50,7 @@ def backward():
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base))
+    resp1 = request(int(first), int(second), int(base), 0, 0)
     print(resp1.check)
     return resp1.check
 
@@ -61,7 +61,7 @@ def up():
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base))
+    resp1 = request(int(first), int(second), int(base), 0, 0)
     print(resp1.check)
     return resp1.check
 
@@ -72,7 +72,7 @@ def down():
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base))
+    resp1 = request(int(first), int(second), int(base), 0, 0)
     print(resp1.check)
     return resp1.check
 
