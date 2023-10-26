@@ -29,6 +29,7 @@ struct anglesRequest_
     , base(0)
     , servo1(0)
     , servo2(0)
+    , isPump(false)
     , isSlow(false)  {
     }
   anglesRequest_(const ContainerAllocator& _alloc)
@@ -37,6 +38,7 @@ struct anglesRequest_
     , base(0)
     , servo1(0)
     , servo2(0)
+    , isPump(false)
     , isSlow(false)  {
   (void)_alloc;
     }
@@ -57,6 +59,9 @@ struct anglesRequest_
 
    typedef int64_t _servo2_type;
   _servo2_type servo2;
+
+   typedef uint8_t _isPump_type;
+  _isPump_type isPump;
 
    typedef uint8_t _isSlow_type;
   _isSlow_type isSlow;
@@ -95,6 +100,7 @@ bool operator==(const ::beginner_tutorials::anglesRequest_<ContainerAllocator1> 
     lhs.base == rhs.base &&
     lhs.servo1 == rhs.servo1 &&
     lhs.servo2 == rhs.servo2 &&
+    lhs.isPump == rhs.isPump &&
     lhs.isSlow == rhs.isSlow;
 }
 
@@ -152,12 +158,12 @@ struct MD5Sum< ::beginner_tutorials::anglesRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "9cb918e313d93f1f1b66c65d5100a33d";
+    return "1e73dc08ff187ad0d3c12605f4fd2f23";
   }
 
   static const char* value(const ::beginner_tutorials::anglesRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x9cb918e313d93f1fULL;
-  static const uint64_t static_value2 = 0x1b66c65d5100a33dULL;
+  static const uint64_t static_value1 = 0x1e73dc08ff187ad0ULL;
+  static const uint64_t static_value2 = 0xd3c12605f4fd2f23ULL;
 };
 
 template<class ContainerAllocator>
@@ -181,6 +187,7 @@ struct Definition< ::beginner_tutorials::anglesRequest_<ContainerAllocator> >
 "int64 base\n"
 "int64 servo1\n"
 "int64 servo2\n"
+"bool isPump\n"
 "bool isSlow\n"
 ;
   }
@@ -205,6 +212,7 @@ namespace serialization
       stream.next(m.base);
       stream.next(m.servo1);
       stream.next(m.servo2);
+      stream.next(m.isPump);
       stream.next(m.isSlow);
     }
 
@@ -234,6 +242,8 @@ struct Printer< ::beginner_tutorials::anglesRequest_<ContainerAllocator> >
     Printer<int64_t>::stream(s, indent + "  ", v.servo1);
     s << indent << "servo2: ";
     Printer<int64_t>::stream(s, indent + "  ", v.servo2);
+    s << indent << "isPump: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.isPump);
     s << indent << "isSlow: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.isSlow);
   }

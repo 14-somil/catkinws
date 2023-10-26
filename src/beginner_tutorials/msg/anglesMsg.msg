@@ -1,3 +1,6 @@
 int64 first
 int64 second
-int64 base
+char base
+int64 servo1 
+int64 servo2
+bool isPump

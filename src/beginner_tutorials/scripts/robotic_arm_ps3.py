@@ -54,8 +54,8 @@ if __name__=='__main__':
                 if(not isButtonPressed):
                     if (exit_button == 1):
                         data = 'x'
-                        print("Shutting down")
                         print('x')
+                        print("Shutting down...")
                         msg = Char(ord(data))
                         pub.publish(msg)
                         joystick.quit()

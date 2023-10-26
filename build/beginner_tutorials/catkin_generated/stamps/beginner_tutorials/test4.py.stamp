@@ -1,19 +1,20 @@
-#!/usr/bin/env python3
+from pynput import keyboard
 
-import rospy
-from beginner_tutorials.msg import anglesMsg
-from visual_kinematics.RobotSerial import *
-import numpy as np
-import sys
-from math import pi
+def on_key_press(key):
+    try:
+        # Handle key press event
+        print(f'Key pressed: {key.char}')
 
-def callback(msg):
-    print(msg.first)
-    print(msg.second)
-    print(msg.base)
+    except AttributeError:
+        # Some special keys don't have a `char` attribute
+        print(f'Special key pressed: {key}')
 
-if __name__ == "__main__":
-    rospy.init_node('Test', anonymous=True)
-    rospy.Subscriber('/angles', anglesMsg, callback)
+def on_key_release(key):
+    # Handle key release event
+    print(f'Key released: {key}')
 
-    rospy.spin()
+# Create a listener that listens for both key presses and key releases
+with keyboard.Listener(
+        on_press=on_key_press,
+        on_release=on_key_release) as listener:
+    listener.join()

@@ -20,7 +20,7 @@
 
 (defclass beginner_tutorials::anglesRequest
   :super ros::object
-  :slots (_first _second _base _servo1 _servo2 _isSlow ))
+  :slots (_first _second _base _servo1 _servo2 _isPump _isSlow ))
 
 (defmethod beginner_tutorials::anglesRequest
   (:init
@@ -30,6 +30,7 @@
     ((:base __base) 0)
     ((:servo1 __servo1) 0)
     ((:servo2 __servo2) 0)
+    ((:isPump __isPump) nil)
     ((:isSlow __isSlow) nil)
     )
    (send-super :init)
@@ -38,6 +39,7 @@
    (setq _base (round __base))
    (setq _servo1 (round __servo1))
    (setq _servo2 (round __servo2))
+   (setq _isPump __isPump)
    (setq _isSlow __isSlow)
    self)
   (:first
@@ -55,6 +57,9 @@
   (:servo2
    (&optional __servo2)
    (if __servo2 (setq _servo2 __servo2)) _servo2)
+  (:isPump
+   (&optional (__isPump :null))
+   (if (not (eq __isPump :null)) (setq _isPump __isPump)) _isPump)
   (:isSlow
    (&optional (__isSlow :null))
    (if (not (eq __isSlow :null)) (setq _isSlow __isSlow)) _isSlow)
@@ -71,6 +76,8 @@
     8
     ;; int64 _servo2
     8
+    ;; bool _isPump
+    1
     ;; bool _isSlow
     1
     ))
@@ -138,6 +145,8 @@
               (write-long (if (>= _servo2 0) 0 #xffffffff) s))
              (t                                         ;; integer
               (write-long _servo2 s)(write-long (if (>= _servo2 0) 0 #xffffffff) s)))
+     ;; bool _isPump
+       (if _isPump (write-byte -1 s) (write-byte 0 s))
      ;; bool _isSlow
        (if _isSlow (write-byte -1 s) (write-byte 0 s))
      ;;
@@ -204,6 +213,8 @@
                       b0)
                     ((= b1  0) (make-instance bignum :size 1 :bv (integer-vector b0)))
                     (t (make-instance bignum :size 2 :bv (integer-vector b0 (ash b1 1)))))))
+   ;; bool _isPump
+     (setq _isPump (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _isSlow
      (setq _isSlow (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
@@ -251,7 +262,7 @@
   :super ros::object
   :slots ())
 
-(setf (get beginner_tutorials::angles :md5sum-) "d61f65b1d41fa5ce5b8822fbdbff89c7")
+(setf (get beginner_tutorials::angles :md5sum-) "f9f067a5d6333bb90da23a282c5316a0")
 (setf (get beginner_tutorials::angles :datatype-) "beginner_tutorials/angles")
 (setf (get beginner_tutorials::angles :request) beginner_tutorials::anglesRequest)
 (setf (get beginner_tutorials::angles :response) beginner_tutorials::anglesResponse)
@@ -259,7 +270,7 @@
 (defmethod beginner_tutorials::anglesRequest
   (:response () (instance beginner_tutorials::anglesResponse :init)))
 
-(setf (get beginner_tutorials::anglesRequest :md5sum-) "d61f65b1d41fa5ce5b8822fbdbff89c7")
+(setf (get beginner_tutorials::anglesRequest :md5sum-) "f9f067a5d6333bb90da23a282c5316a0")
 (setf (get beginner_tutorials::anglesRequest :datatype-) "beginner_tutorials/anglesRequest")
 (setf (get beginner_tutorials::anglesRequest :definition-)
       "int64 first
@@ -267,13 +278,14 @@ int64 second
 int64 base
 int64 servo1
 int64 servo2
+bool isPump
 bool isSlow
 ---
 bool check
 
 ")
 
-(setf (get beginner_tutorials::anglesResponse :md5sum-) "d61f65b1d41fa5ce5b8822fbdbff89c7")
+(setf (get beginner_tutorials::anglesResponse :md5sum-) "f9f067a5d6333bb90da23a282c5316a0")
 (setf (get beginner_tutorials::anglesResponse :datatype-) "beginner_tutorials/anglesResponse")
 (setf (get beginner_tutorials::anglesResponse :definition-)
       "int64 first
@@ -281,6 +293,7 @@ int64 second
 int64 base
 int64 servo1
 int64 servo2
+bool isPump
 bool isSlow
 ---
 bool check
@@ -289,6 +302,6 @@ bool check
 
 
 
-(provide :beginner_tutorials/angles "d61f65b1d41fa5ce5b8822fbdbff89c7")
+(provide :beginner_tutorials/angles "f9f067a5d6333bb90da23a282c5316a0")
 
 

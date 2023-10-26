@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::beginner_tutorials::angles > {
   static const char* value()
   {
-    return "d61f65b1d41fa5ce5b8822fbdbff89c7";
+    return "f9f067a5d6333bb90da23a282c5316a0";
   }
 
   static const char* value(const ::beginner_tutorials::angles&) { return value(); }

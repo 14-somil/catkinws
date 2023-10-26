@@ -32,6 +32,11 @@
     :initarg :servo2
     :type cl:integer
     :initform 0)
+   (isPump
+    :reader isPump
+    :initarg :isPump
+    :type cl:boolean
+    :initform cl:nil)
    (isSlow
     :reader isSlow
     :initarg :isSlow
@@ -71,6 +76,11 @@
 (cl:defmethod servo2-val ((m <angles-request>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader beginner_tutorials-srv:servo2-val is deprecated.  Use beginner_tutorials-srv:servo2 instead.")
   (servo2 m))
+
+(cl:ensure-generic-function 'isPump-val :lambda-list '(m))
+(cl:defmethod isPump-val ((m <angles-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader beginner_tutorials-srv:isPump-val is deprecated.  Use beginner_tutorials-srv:isPump instead.")
+  (isPump m))
 
 (cl:ensure-generic-function 'isSlow-val :lambda-list '(m))
 (cl:defmethod isSlow-val ((m <angles-request>))
@@ -128,6 +138,7 @@
     (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
     )
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'isPump) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'isSlow) 1 0)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <angles-request>) istream)
@@ -182,6 +193,7 @@
       (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'servo2) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+    (cl:setf (cl:slot-value msg 'isPump) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'isSlow) (cl:not (cl:zerop (cl:read-byte istream))))
   msg
 )
@@ -193,16 +205,16 @@
   "beginner_tutorials/anglesRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<angles-request>)))
   "Returns md5sum for a message object of type '<angles-request>"
-  "d61f65b1d41fa5ce5b8822fbdbff89c7")
+  "f9f067a5d6333bb90da23a282c5316a0")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'angles-request)))
   "Returns md5sum for a message object of type 'angles-request"
-  "d61f65b1d41fa5ce5b8822fbdbff89c7")
+  "f9f067a5d6333bb90da23a282c5316a0")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<angles-request>)))
   "Returns full string definition for message of type '<angles-request>"
-  (cl:format cl:nil "int64 first~%int64 second~%int64 base~%int64 servo1~%int64 servo2~%bool isSlow~%~%~%"))
+  (cl:format cl:nil "int64 first~%int64 second~%int64 base~%int64 servo1~%int64 servo2~%bool isPump~%bool isSlow~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'angles-request)))
   "Returns full string definition for message of type 'angles-request"
-  (cl:format cl:nil "int64 first~%int64 second~%int64 base~%int64 servo1~%int64 servo2~%bool isSlow~%~%~%"))
+  (cl:format cl:nil "int64 first~%int64 second~%int64 base~%int64 servo1~%int64 servo2~%bool isPump~%bool isSlow~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <angles-request>))
   (cl:+ 0
      8
@@ -210,6 +222,7 @@
      8
      8
      8
+     1
      1
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <angles-request>))
@@ -220,6 +233,7 @@
     (cl:cons ':base (base msg))
     (cl:cons ':servo1 (servo1 msg))
     (cl:cons ':servo2 (servo2 msg))
+    (cl:cons ':isPump (isPump msg))
     (cl:cons ':isSlow (isSlow msg))
 ))
 ;//! \htmlinclude angles-response.msg.html
@@ -261,10 +275,10 @@
   "beginner_tutorials/anglesResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<angles-response>)))
   "Returns md5sum for a message object of type '<angles-response>"
-  "d61f65b1d41fa5ce5b8822fbdbff89c7")
+  "f9f067a5d6333bb90da23a282c5316a0")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'angles-response)))
   "Returns md5sum for a message object of type 'angles-response"
-  "d61f65b1d41fa5ce5b8822fbdbff89c7")
+  "f9f067a5d6333bb90da23a282c5316a0")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<angles-response>)))
   "Returns full string definition for message of type '<angles-response>"
   (cl:format cl:nil "bool check~%~%~%~%"))

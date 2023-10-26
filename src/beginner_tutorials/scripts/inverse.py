@@ -35,44 +35,44 @@ z=10
 def forward():
     
     global x,y,z
-    y = y+5
+    y = y+1
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base), 0, 0)
+    resp1 = request(int(first), int(second), int(base), 0, 0, True, False)
     print(resp1.check)
     return resp1.check
 
 def backward():
 
     global x,y,z
-    y = y-5
+    y = y-1
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base), 0, 0)
+    resp1 = request(int(first), int(second), int(base), 0, 0, True, False)
     print(resp1.check)
     return resp1.check
 
 def up():
     
     global x,y,z
-    z = z+5
+    z = z+1
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base), 0, 0)
+    resp1 = request(int(first), int(second), int(base), 0, 0, True, False)
     print(resp1.check)
     return resp1.check
 
 def down():
 
     global x,y,z
-    z = z-5
+    z = z-1
 
     base, first, second=ik(x,y,z)
 
-    resp1 = request(int(first), int(second), int(base), 0, 0)
+    resp1 = request(int(first), int(second), int(base), 0, 0, True, False)
     print(resp1.check)
     return resp1.check
 
@@ -146,7 +146,6 @@ if __name__ == "__main__":
                             if(axis_1 < -0.5):
                                 print('a')
                                 forward()
-                                time.sleep(0.1)
                             else:
                                 break
                     elif(axis_1 > 0.5):
@@ -158,7 +157,6 @@ if __name__ == "__main__":
                             if(axis_1 > +0.5):
                                 print('z')
                                 backward()
-                                time.sleep(0.1)
                             else:
                                 break
                     elif(axis_2 < -0.5):
@@ -170,7 +168,6 @@ if __name__ == "__main__":
                             if(axis_2 < -0.5):
                                 print('s')
                                 up()
-                                time.sleep(0.1)
                             else:
                                 break
                     elif(axis_2 > 0.5 ):
@@ -182,7 +179,6 @@ if __name__ == "__main__":
                             if(axis_2 > +0.5):
                                 print('x')
                                 down()
-                                time.sleep(0.1)
                             else:
                                 break
             

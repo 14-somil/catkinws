@@ -164,11 +164,13 @@ include_directories(
 catkin_install_python(
   PROGRAMS
   scripts/inverse.py
+  scripts/inverse_keyboard.py
   scripts/test.py
   scripts/test2.py
   scripts/test3.py
   scripts/test4.py
   scripts/robotic_arm_ps3.py
+  scripts/robotic_arm_keyboard.py
   scripts/teleop_ps3_v2.py
   scripts/teleop_wireless_server.py
   scripts/teleop_ps3.py

@@ -38,5 +38,5 @@ if __name__ == "__main__":
 
     base, first, second=ik(x,y,z)
     print('check')
-    resp1 = request(int(first), int(second), int(base))
+    resp1 = request(int(first), int(second), int(base), 0, 0, False, False)
     print(resp1.check)

@@ -26,6 +26,7 @@ class anglesRequest {
       this.base = null;
       this.servo1 = null;
       this.servo2 = null;
+      this.isPump = null;
       this.isSlow = null;
     }
     else {
@@ -59,6 +60,12 @@ class anglesRequest {
       else {
         this.servo2 = 0;
       }
+      if (initObj.hasOwnProperty('isPump')) {
+        this.isPump = initObj.isPump
+      }
+      else {
+        this.isPump = false;
+      }
       if (initObj.hasOwnProperty('isSlow')) {
         this.isSlow = initObj.isSlow
       }
@@ -80,6 +87,8 @@ class anglesRequest {
     bufferOffset = _serializer.int64(obj.servo1, buffer, bufferOffset);
     // Serialize message field [servo2]
     bufferOffset = _serializer.int64(obj.servo2, buffer, bufferOffset);
+    // Serialize message field [isPump]
+    bufferOffset = _serializer.bool(obj.isPump, buffer, bufferOffset);
     // Serialize message field [isSlow]
     bufferOffset = _serializer.bool(obj.isSlow, buffer, bufferOffset);
     return bufferOffset;
@@ -99,13 +108,15 @@ class anglesRequest {
     data.servo1 = _deserializer.int64(buffer, bufferOffset);
     // Deserialize message field [servo2]
     data.servo2 = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [isPump]
+    data.isPump = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [isSlow]
     data.isSlow = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 41;
+    return 42;
   }
 
   static datatype() {
@@ -115,7 +126,7 @@ class anglesRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '9cb918e313d93f1f1b66c65d5100a33d';
+    return '1e73dc08ff187ad0d3c12605f4fd2f23';
   }
 
   static messageDefinition() {
@@ -126,6 +137,7 @@ class anglesRequest {
     int64 base
     int64 servo1
     int64 servo2
+    bool isPump
     bool isSlow
     
     `;
@@ -170,6 +182,13 @@ class anglesRequest {
     }
     else {
       resolved.servo2 = 0
+    }
+
+    if (msg.isPump !== undefined) {
+      resolved.isPump = msg.isPump;
+    }
+    else {
+      resolved.isPump = false
     }
 
     if (msg.isSlow !== undefined) {
@@ -258,6 +277,6 @@ class anglesResponse {
 module.exports = {
   Request: anglesRequest,
   Response: anglesResponse,
-  md5sum() { return 'd61f65b1d41fa5ce5b8822fbdbff89c7'; },
+  md5sum() { return 'f9f067a5d6333bb90da23a282c5316a0'; },
   datatype() { return 'beginner_tutorials/angles'; }
 };

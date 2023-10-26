@@ -9,6 +9,8 @@
           SERVO1
           SERVO2-VAL
           SERVO2
+          ISPUMP-VAL
+          ISPUMP
           ISSLOW-VAL
           ISSLOW
           CHECK-VAL

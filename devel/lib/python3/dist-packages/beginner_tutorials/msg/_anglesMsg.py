@@ -8,14 +8,17 @@ import struct
 
 
 class anglesMsg(genpy.Message):
-  _md5sum = "0496e8c0c35c632938a659f27c1ce0a3"
+  _md5sum = "54456492e189535a538699a4d3569641"
   _type = "beginner_tutorials/anglesMsg"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """int64 first
 int64 second
-int64 base"""
-  __slots__ = ['first','second','base']
-  _slot_types = ['int64','int64','int64']
+char base
+int64 servo1 
+int64 servo2
+bool isPump"""
+  __slots__ = ['first','second','base','servo1','servo2','isPump']
+  _slot_types = ['int64','int64','char','int64','int64','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +28,7 @@ int64 base"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       first,second,base
+       first,second,base,servo1,servo2,isPump
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -40,10 +43,19 @@ int64 base"""
         self.second = 0
       if self.base is None:
         self.base = 0
+      if self.servo1 is None:
+        self.servo1 = 0
+      if self.servo2 is None:
+        self.servo2 = 0
+      if self.isPump is None:
+        self.isPump = False
     else:
       self.first = 0
       self.second = 0
       self.base = 0
+      self.servo1 = 0
+      self.servo2 = 0
+      self.isPump = False
 
   def _get_types(self):
     """
@@ -58,7 +70,7 @@ int64 base"""
     """
     try:
       _x = self
-      buff.write(_get_struct_3q().pack(_x.first, _x.second, _x.base))
+      buff.write(_get_struct_2qB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -73,8 +85,9 @@ int64 base"""
       end = 0
       _x = self
       start = end
-      end += 24
-      (_x.first, _x.second, _x.base,) = _get_struct_3q().unpack(str[start:end])
+      end += 34
+      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2qB2qB().unpack(str[start:end])
+      self.isPump = bool(self.isPump)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -88,7 +101,7 @@ int64 base"""
     """
     try:
       _x = self
-      buff.write(_get_struct_3q().pack(_x.first, _x.second, _x.base))
+      buff.write(_get_struct_2qB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -104,8 +117,9 @@ int64 base"""
       end = 0
       _x = self
       start = end
-      end += 24
-      (_x.first, _x.second, _x.base,) = _get_struct_3q().unpack(str[start:end])
+      end += 34
+      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2qB2qB().unpack(str[start:end])
+      self.isPump = bool(self.isPump)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -114,9 +128,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_3q = None
-def _get_struct_3q():
-    global _struct_3q
-    if _struct_3q is None:
-        _struct_3q = struct.Struct("<3q")
-    return _struct_3q
+_struct_2qB2qB = None
+def _get_struct_2qB2qB():
+    global _struct_2qB2qB
+    if _struct_2qB2qB is None:
+        _struct_2qB2qB = struct.Struct("<2qB2qB")
+    return _struct_2qB2qB
