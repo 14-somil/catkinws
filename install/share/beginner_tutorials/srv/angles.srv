@@ -1,0 +1,9 @@
+int64 first
+int64 second
+int64 base
+int64 servo1
+int64 servo2
+bool isPump
+bool isSlow
+---
+bool check

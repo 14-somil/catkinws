@@ -33,7 +33,7 @@ Button = None
 def forward():
     
     global x,y,z,servo1,servo2,isPump,base,first,second
-    y = y+1
+    y = y+2
 
     _, first, second=ik(x,y,z)
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
@@ -42,7 +42,7 @@ def forward():
 def backward():
 
     global x,y,z,servo1,servo2,isPump,base,first,second
-    y = y-1
+    y = y-2
 
     _, first, second=ik(x,y,z)
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
@@ -51,7 +51,7 @@ def backward():
 def up():
 
     global x,y,z,servo1,servo2,isPump,base,first,second
-    z = z+1
+    z = z+2
 
     _, first, second=ik(x,y,z)
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
@@ -60,7 +60,7 @@ def up():
 def down():
 
     global x,y,z,servo1,servo2,isPump,base,first,second
-    z = z-1
+    z = z-2
 
     _, first, second=ik(x,y,z)
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
@@ -93,7 +93,7 @@ def stop():
 def serv_right():
     global x,y,z,servo1,servo2,isPump,base,first,second
 
-    servo1 += 5
+    servo1 += 2
 
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
     pub.publish(msg)
@@ -101,7 +101,7 @@ def serv_right():
 def serv_left():
     global x,y,z,servo1,servo2,isPump,base,first,second
 
-    servo1 -= 5
+    servo1 -= 2
 
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
     pub.publish(msg)
@@ -109,7 +109,7 @@ def serv_left():
 def serv_up():
     global x,y,z,servo1,servo2,isPump,base,first,second
 
-    servo2 += 5
+    servo2 += 2
 
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
     pub.publish(msg)
@@ -117,7 +117,7 @@ def serv_up():
 def serv_down():
     global x,y,z,servo1,servo2,isPump,base,first,second
 
-    servo2 -= 5
+    servo2 -= 2
 
     msg = anglesMsg(int(first), int(second), ord(base), servo1, servo2, isPump)
     pub.publish(msg)
@@ -170,16 +170,16 @@ def on_key_press(key):
         elif(key.char == 'l'):
             down()
 
-        elif(key.char == '6'):
+        elif(key.char == '4'):
             serv_right()
         
-        elif(key.char == '4'):
+        elif(key.char == '6'):
             serv_left()
         
-        elif(key.char == '8'):
+        elif(key.char == '2'):
             serv_up()
         
-        elif(key.char == '2'):
+        elif(key.char == '8'):
             serv_down()
         
         elif(key.char == 'z'):

@@ -54,8 +54,8 @@ if __name__=='__main__':
                 if(not isButtonPressed):
                     if (exit_button == 1):
                         data = 'x'
-                        print("Shutting down")
                         print('x')
+                        print("Shutting down...")
                         msg = Char(ord(data))
                         pub.publish(msg)
                         joystick.quit()
@@ -117,6 +117,20 @@ if __name__=='__main__':
                         print(data)
                         msg = Char(ord(data))
                         pub.publish(msg)
+                        time.sleep(0.01)
+
+                        while 1:
+                            pygame.event.pump()
+                            servo_1_left = joystick.get_button(4)
+                            if servo_1_left == 1:
+                                print(data)
+                                msg = Char(ord(data))
+                                pub.publish(msg)
+                                time.sleep(0.1)
+                            else:
+                                break
+                            
+
 
                     elif(servo_1_right==1 and Button != 'k'):
                         data = 'k'
@@ -125,6 +139,16 @@ if __name__=='__main__':
                         print(data)
                         msg = Char(ord(data))
                         pub.publish(msg)
+                        while 1:
+                            pygame.event.pump()
+                            servo_1_right = joystick.get_button(5)
+                            if servo_1_right == 1:
+                                print(data)
+                                msg = Char(ord(data))
+                                pub.publish(msg)
+                                time.sleep(0.1)
+                            else:
+                                break
 
                     elif(servo_2_left==1 and Button != 'i'):
                         data = 'i'
@@ -133,6 +157,16 @@ if __name__=='__main__':
                         print(data)
                         msg = Char(ord(data))
                         pub.publish(msg)
+                        while 1:
+                            pygame.event.pump()
+                            servo_2_left = joystick.get_button(6)
+                            if servo_2_left == 1:
+                                print(data)
+                                msg = Char(ord(data))
+                                pub.publish(msg)
+                                time.sleep(0.1)
+                            else:
+                                break
 
                     elif(servo_2_right==1 and Button != 'o'):
                         data = 'o'
@@ -141,6 +175,16 @@ if __name__=='__main__':
                         print(data)
                         msg = Char(ord(data))
                         pub.publish(msg)
+                        while 1:
+                            pygame.event.pump()
+                            servo_2_right = joystick.get_button(7)
+                            if servo_2_right == 1:
+                                print(data)
+                                msg = Char(ord(data))
+                                pub.publish(msg)
+                                time.sleep(0.1)
+                            else:
+                                break
                     
                     elif(pump == 1 and Button != 'z'):
                         data = 'z'

@@ -1,10 +1,10 @@
 
 "use strict";
 
-let angles = require('./angles.js')
 let AddTwoInts = require('./AddTwoInts.js')
+let angles = require('./angles.js')
 
 module.exports = {
-  angles: angles,
   AddTwoInts: AddTwoInts,
+  angles: angles,
 };
