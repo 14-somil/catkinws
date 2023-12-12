@@ -1,0 +1,9 @@
+from math import pi
+
+angle = {'first':180,
+         'second':0,
+         'base':0}
+        
+angle_rad = angle *pi/180
+
+print(angle_rad)

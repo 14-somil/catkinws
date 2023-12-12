@@ -1,0 +1,8 @@
+prefix=/home/somil/catkin_ws/install
+
+Name: final_rover
+Description: Description of final_rover
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

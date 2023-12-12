@@ -52,6 +52,8 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    Num.msg
    anglesMsg.msg
+   encodersFeedback.msg
+   speedMsg.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -164,6 +166,10 @@ include_directories(
 catkin_install_python(
   PROGRAMS
   scripts/inverse.py
+  scripts/inverse_v3.py
+  scripts/inverse_v4.py
+  scripts/teleop_v2_wireless_server.py
+  scripts/teleop_v2_wireless_client.py
   scripts/inverse_keyboard.py
   scripts/test.py
   scripts/test2.py
@@ -175,6 +181,7 @@ catkin_install_python(
   scripts/teleop_wireless_server.py
   scripts/teleop_ps3.py
   scripts/teleop.py
+  scripts/teleop_v2.py
   scripts/d_turtlesim.py
   scripts/talker.py 
   scripts/listener.py

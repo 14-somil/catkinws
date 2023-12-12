@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg;/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg"
+messages_str = "/home/somil/catkin_ws/src/beginner_tutorials/msg/Num.msg;/home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg;/home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg;/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg"
 services_str = "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv;/home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv"
 pkg_name = "beginner_tutorials"
 dependencies_str = "std_msgs"

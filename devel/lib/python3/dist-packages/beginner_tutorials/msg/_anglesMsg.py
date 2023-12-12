@@ -8,17 +8,17 @@ import struct
 
 
 class anglesMsg(genpy.Message):
-  _md5sum = "54456492e189535a538699a4d3569641"
+  _md5sum = "926bd9e23b51251f5bd37bbd4418b9f6"
   _type = "beginner_tutorials/anglesMsg"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """int64 first
-int64 second
+  _full_text = """float64 first
+float64 second
 char base
 int64 servo1 
 int64 servo2
 bool isPump"""
   __slots__ = ['first','second','base','servo1','servo2','isPump']
-  _slot_types = ['int64','int64','char','int64','int64','bool']
+  _slot_types = ['float64','float64','char','int64','int64','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -38,9 +38,9 @@ bool isPump"""
       super(anglesMsg, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
       if self.first is None:
-        self.first = 0
+        self.first = 0.
       if self.second is None:
-        self.second = 0
+        self.second = 0.
       if self.base is None:
         self.base = 0
       if self.servo1 is None:
@@ -50,8 +50,8 @@ bool isPump"""
       if self.isPump is None:
         self.isPump = False
     else:
-      self.first = 0
-      self.second = 0
+      self.first = 0.
+      self.second = 0.
       self.base = 0
       self.servo1 = 0
       self.servo2 = 0
@@ -70,7 +70,7 @@ bool isPump"""
     """
     try:
       _x = self
-      buff.write(_get_struct_2qB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
+      buff.write(_get_struct_2dB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -86,7 +86,7 @@ bool isPump"""
       _x = self
       start = end
       end += 34
-      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2qB2qB().unpack(str[start:end])
+      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2dB2qB().unpack(str[start:end])
       self.isPump = bool(self.isPump)
       return self
     except struct.error as e:
@@ -101,7 +101,7 @@ bool isPump"""
     """
     try:
       _x = self
-      buff.write(_get_struct_2qB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
+      buff.write(_get_struct_2dB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -118,7 +118,7 @@ bool isPump"""
       _x = self
       start = end
       end += 34
-      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2qB2qB().unpack(str[start:end])
+      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2dB2qB().unpack(str[start:end])
       self.isPump = bool(self.isPump)
       return self
     except struct.error as e:
@@ -128,9 +128,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2qB2qB = None
-def _get_struct_2qB2qB():
-    global _struct_2qB2qB
-    if _struct_2qB2qB is None:
-        _struct_2qB2qB = struct.Struct("<2qB2qB")
-    return _struct_2qB2qB
+_struct_2dB2qB = None
+def _get_struct_2dB2qB():
+    global _struct_2dB2qB
+    if _struct_2dB2qB is None:
+        _struct_2dB2qB = struct.Struct("<2dB2qB")
+    return _struct_2dB2qB

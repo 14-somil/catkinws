@@ -5,5 +5,9 @@
    "NUM"
    "<ANGLESMSG>"
    "ANGLESMSG"
+   "<ENCODERSFEEDBACK>"
+   "ENCODERSFEEDBACK"
+   "<SPEEDMSG>"
+   "SPEEDMSG"
   ))
 

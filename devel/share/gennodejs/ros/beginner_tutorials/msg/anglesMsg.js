@@ -30,13 +30,13 @@ class anglesMsg {
         this.first = initObj.first
       }
       else {
-        this.first = 0;
+        this.first = 0.0;
       }
       if (initObj.hasOwnProperty('second')) {
         this.second = initObj.second
       }
       else {
-        this.second = 0;
+        this.second = 0.0;
       }
       if (initObj.hasOwnProperty('base')) {
         this.base = initObj.base
@@ -68,9 +68,9 @@ class anglesMsg {
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type anglesMsg
     // Serialize message field [first]
-    bufferOffset = _serializer.int64(obj.first, buffer, bufferOffset);
+    bufferOffset = _serializer.float64(obj.first, buffer, bufferOffset);
     // Serialize message field [second]
-    bufferOffset = _serializer.int64(obj.second, buffer, bufferOffset);
+    bufferOffset = _serializer.float64(obj.second, buffer, bufferOffset);
     // Serialize message field [base]
     bufferOffset = _serializer.char(obj.base, buffer, bufferOffset);
     // Serialize message field [servo1]
@@ -87,9 +87,9 @@ class anglesMsg {
     let len;
     let data = new anglesMsg(null);
     // Deserialize message field [first]
-    data.first = _deserializer.int64(buffer, bufferOffset);
+    data.first = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [second]
-    data.second = _deserializer.int64(buffer, bufferOffset);
+    data.second = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [base]
     data.base = _deserializer.char(buffer, bufferOffset);
     // Deserialize message field [servo1]
@@ -112,14 +112,14 @@ class anglesMsg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '54456492e189535a538699a4d3569641';
+    return '926bd9e23b51251f5bd37bbd4418b9f6';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    int64 first
-    int64 second
+    float64 first
+    float64 second
     char base
     int64 servo1 
     int64 servo2
@@ -137,14 +137,14 @@ class anglesMsg {
       resolved.first = msg.first;
     }
     else {
-      resolved.first = 0
+      resolved.first = 0.0
     }
 
     if (msg.second !== undefined) {
       resolved.second = msg.second;
     }
     else {
-      resolved.second = 0
+      resolved.second = 0.0
     }
 
     if (msg.base !== undefined) {

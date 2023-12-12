@@ -4,5 +4,7 @@
     ],
     "python.analysis.extraPaths": [
         "/opt/ros/noetic/lib/python3/dist-packages"
-    ]
+    ],
+    "cmake.configureOnOpen": true,
+    "cmake.sourceDirectory": "/home/somil/catkin_ws/src/beginner_tutorials"
 }

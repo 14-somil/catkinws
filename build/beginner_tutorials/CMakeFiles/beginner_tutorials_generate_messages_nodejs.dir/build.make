@@ -55,6 +55,8 @@ include beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodej
 
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/Num.js
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/anglesMsg.js
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/encodersFeedback.js
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/speedMsg.js
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/AddTwoInts.js
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/angles.js
 
@@ -69,19 +71,31 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs: /home
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from beginner_tutorials/anglesMsg.msg"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/beginner_tutorials/msg/anglesMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg
 
+/home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/encodersFeedback.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/encodersFeedback.js: /home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from beginner_tutorials/encodersFeedback.msg"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg
+
+/home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/speedMsg.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/speedMsg.js: /home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from beginner_tutorials/speedMsg.msg"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg
+
 /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/AddTwoInts.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/AddTwoInts.js: /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from beginner_tutorials/AddTwoInts.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from beginner_tutorials/AddTwoInts.srv"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv
 
 /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/angles.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/angles.js: /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from beginner_tutorials/angles.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from beginner_tutorials/angles.srv"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv
 
 beginner_tutorials_generate_messages_nodejs: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs
 beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/Num.js
 beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/anglesMsg.js
+beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/encodersFeedback.js
+beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/msg/speedMsg.js
 beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/AddTwoInts.js
 beginner_tutorials_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/angles.js
 beginner_tutorials_generate_messages_nodejs: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs.dir/build.make

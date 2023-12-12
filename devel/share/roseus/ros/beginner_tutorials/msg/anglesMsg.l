@@ -19,16 +19,16 @@
 (defmethod beginner_tutorials::anglesMsg
   (:init
    (&key
-    ((:first __first) 0)
-    ((:second __second) 0)
+    ((:first __first) 0.0)
+    ((:second __second) 0.0)
     ((:base __base) 0)
     ((:servo1 __servo1) 0)
     ((:servo2 __servo2) 0)
     ((:isPump __isPump) nil)
     )
    (send-super :init)
-   (setq _first (round __first))
-   (setq _second (round __second))
+   (setq _first (float __first))
+   (setq _second (float __second))
    (setq _base (round __base))
    (setq _servo1 (round __servo1))
    (setq _servo2 (round __servo2))
@@ -55,9 +55,9 @@
   (:serialization-length
    ()
    (+
-    ;; int64 _first
+    ;; float64 _first
     8
-    ;; int64 _second
+    ;; float64 _second
     8
     ;; char _base
     1
@@ -72,30 +72,10 @@
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; int64 _first
-#+(or :alpha :irix6 :x86_64)
-       (progn (sys::poke _first (send s :buffer) (send s :count) :long) (incf (stream-count s) 8))
-#-(or :alpha :irix6 :x86_64)
-       (cond ((and (class _first) (= (length (_first . bv)) 2)) ;; bignum
-              (write-long (ash (elt (_first . bv) 0) 0) s)
-              (write-long (ash (elt (_first . bv) 1) -1) s))
-             ((and (class _first) (= (length (_first . bv)) 1)) ;; big1
-              (write-long (elt (_first . bv) 0) s)
-              (write-long (if (>= _first 0) 0 #xffffffff) s))
-             (t                                         ;; integer
-              (write-long _first s)(write-long (if (>= _first 0) 0 #xffffffff) s)))
-     ;; int64 _second
-#+(or :alpha :irix6 :x86_64)
-       (progn (sys::poke _second (send s :buffer) (send s :count) :long) (incf (stream-count s) 8))
-#-(or :alpha :irix6 :x86_64)
-       (cond ((and (class _second) (= (length (_second . bv)) 2)) ;; bignum
-              (write-long (ash (elt (_second . bv) 0) 0) s)
-              (write-long (ash (elt (_second . bv) 1) -1) s))
-             ((and (class _second) (= (length (_second . bv)) 1)) ;; big1
-              (write-long (elt (_second . bv) 0) s)
-              (write-long (if (>= _second 0) 0 #xffffffff) s))
-             (t                                         ;; integer
-              (write-long _second s)(write-long (if (>= _second 0) 0 #xffffffff) s)))
+     ;; float64 _first
+       (sys::poke _first (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; float64 _second
+       (sys::poke _second (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
      ;; char _base
        (write-byte _base s)
      ;; int64 _servo1
@@ -128,30 +108,10 @@
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; int64 _first
-#+(or :alpha :irix6 :x86_64)
-      (setf _first (prog1 (sys::peek buf ptr- :long) (incf ptr- 8)))
-#-(or :alpha :irix6 :x86_64)
-      (setf _first (let ((b0 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4)))
-                  (b1 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4))))
-              (cond ((= b1 -1) b0)
-                     ((and (= b1  0)
-                           (<= lisp::most-negative-fixnum b0 lisp::most-positive-fixnum))
-                      b0)
-                    ((= b1  0) (make-instance bignum :size 1 :bv (integer-vector b0)))
-                    (t (make-instance bignum :size 2 :bv (integer-vector b0 (ash b1 1)))))))
-   ;; int64 _second
-#+(or :alpha :irix6 :x86_64)
-      (setf _second (prog1 (sys::peek buf ptr- :long) (incf ptr- 8)))
-#-(or :alpha :irix6 :x86_64)
-      (setf _second (let ((b0 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4)))
-                  (b1 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4))))
-              (cond ((= b1 -1) b0)
-                     ((and (= b1  0)
-                           (<= lisp::most-negative-fixnum b0 lisp::most-positive-fixnum))
-                      b0)
-                    ((= b1  0) (make-instance bignum :size 1 :bv (integer-vector b0)))
-                    (t (make-instance bignum :size 2 :bv (integer-vector b0 (ash b1 1)))))))
+   ;; float64 _first
+     (setq _first (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; float64 _second
+     (setq _second (sys::peek buf ptr- :double)) (incf ptr- 8)
    ;; char _base
      (setq _base (sys::peek buf ptr- :char)) (incf ptr- 1)
    ;; int64 _servo1
@@ -184,11 +144,11 @@
    self)
   )
 
-(setf (get beginner_tutorials::anglesMsg :md5sum-) "54456492e189535a538699a4d3569641")
+(setf (get beginner_tutorials::anglesMsg :md5sum-) "926bd9e23b51251f5bd37bbd4418b9f6")
 (setf (get beginner_tutorials::anglesMsg :datatype-) "beginner_tutorials/anglesMsg")
 (setf (get beginner_tutorials::anglesMsg :definition-)
-      "int64 first
-int64 second
+      "float64 first
+float64 second
 char base
 int64 servo1 
 int64 servo2
@@ -197,6 +157,6 @@ bool isPump
 
 
 
-(provide :beginner_tutorials/anglesMsg "54456492e189535a538699a4d3569641")
+(provide :beginner_tutorials/anglesMsg "926bd9e23b51251f5bd37bbd4418b9f6")
 
 

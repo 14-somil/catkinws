@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "/home/somil/catkin_ws/devel/include/beginner_tutorials/Num.h"
   "/home/somil/catkin_ws/devel/include/beginner_tutorials/angles.h"
   "/home/somil/catkin_ws/devel/include/beginner_tutorials/anglesMsg.h"
+  "/home/somil/catkin_ws/devel/include/beginner_tutorials/encodersFeedback.h"
+  "/home/somil/catkin_ws/devel/include/beginner_tutorials/speedMsg.h"
   "CMakeFiles/beginner_tutorials_generate_messages_cpp"
 )
 

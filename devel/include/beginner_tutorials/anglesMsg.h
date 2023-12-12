@@ -24,16 +24,16 @@ struct anglesMsg_
   typedef anglesMsg_<ContainerAllocator> Type;
 
   anglesMsg_()
-    : first(0)
-    , second(0)
+    : first(0.0)
+    , second(0.0)
     , base(0)
     , servo1(0)
     , servo2(0)
     , isPump(false)  {
     }
   anglesMsg_(const ContainerAllocator& _alloc)
-    : first(0)
-    , second(0)
+    : first(0.0)
+    , second(0.0)
     , base(0)
     , servo1(0)
     , servo2(0)
@@ -43,10 +43,10 @@ struct anglesMsg_
 
 
 
-   typedef int64_t _first_type;
+   typedef double _first_type;
   _first_type first;
 
-   typedef int64_t _second_type;
+   typedef double _second_type;
   _second_type second;
 
    typedef uint8_t _base_type;
@@ -152,12 +152,12 @@ struct MD5Sum< ::beginner_tutorials::anglesMsg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "54456492e189535a538699a4d3569641";
+    return "926bd9e23b51251f5bd37bbd4418b9f6";
   }
 
   static const char* value(const ::beginner_tutorials::anglesMsg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x54456492e189535aULL;
-  static const uint64_t static_value2 = 0x538699a4d3569641ULL;
+  static const uint64_t static_value1 = 0x926bd9e23b51251fULL;
+  static const uint64_t static_value2 = 0x5bd37bbd4418b9f6ULL;
 };
 
 template<class ContainerAllocator>
@@ -176,8 +176,8 @@ struct Definition< ::beginner_tutorials::anglesMsg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int64 first\n"
-"int64 second\n"
+    return "float64 first\n"
+"float64 second\n"
 "char base\n"
 "int64 servo1 \n"
 "int64 servo2\n"
@@ -225,9 +225,9 @@ struct Printer< ::beginner_tutorials::anglesMsg_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::beginner_tutorials::anglesMsg_<ContainerAllocator>& v)
   {
     s << indent << "first: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.first);
+    Printer<double>::stream(s, indent + "  ", v.first);
     s << indent << "second: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.second);
+    Printer<double>::stream(s, indent + "  ", v.second);
     s << indent << "base: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.base);
     s << indent << "servo1: ";
