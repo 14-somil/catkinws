@@ -25,13 +25,11 @@ struct encodersFeedback_
 
   encodersFeedback_()
     : first(0.0)
-    , second(0.0)
-    , base(0.0)  {
+    , second(0.0)  {
     }
   encodersFeedback_(const ContainerAllocator& _alloc)
     : first(0.0)
-    , second(0.0)
-    , base(0.0)  {
+    , second(0.0)  {
   (void)_alloc;
     }
 
@@ -43,12 +41,15 @@ struct encodersFeedback_
    typedef double _second_type;
   _second_type second;
 
-   typedef double _base_type;
-  _base_type base;
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(base)
+  #undef base
+#endif
 
 
+  static const double base;
 
   typedef boost::shared_ptr< ::beginner_tutorials::encodersFeedback_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::beginner_tutorials::encodersFeedback_<ContainerAllocator> const> ConstPtr;
@@ -61,6 +62,15 @@ typedef boost::shared_ptr< ::beginner_tutorials::encodersFeedback > encodersFeed
 typedef boost::shared_ptr< ::beginner_tutorials::encodersFeedback const> encodersFeedbackConstPtr;
 
 // constants requiring out of line definition
+
+   
+   template<typename ContainerAllocator> const double
+      encodersFeedback_<ContainerAllocator>::base =
+        
+          0.0
+        
+        ;
+   
 
 
 
@@ -76,8 +86,7 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::beginner_tutorials::encodersFeedback_<ContainerAllocator1> & lhs, const ::beginner_tutorials::encodersFeedback_<ContainerAllocator2> & rhs)
 {
   return lhs.first == rhs.first &&
-    lhs.second == rhs.second &&
-    lhs.base == rhs.base;
+    lhs.second == rhs.second;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -134,12 +143,12 @@ struct MD5Sum< ::beginner_tutorials::encodersFeedback_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "0745d61b2a4b159f25fc57eee55861a2";
+    return "7506f42907eb3eaefadf3e0d4485e175";
   }
 
   static const char* value(const ::beginner_tutorials::encodersFeedback_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x0745d61b2a4b159fULL;
-  static const uint64_t static_value2 = 0x25fc57eee55861a2ULL;
+  static const uint64_t static_value1 = 0x7506f42907eb3eaeULL;
+  static const uint64_t static_value2 = 0xfadf3e0d4485e175ULL;
 };
 
 template<class ContainerAllocator>
@@ -160,7 +169,7 @@ struct Definition< ::beginner_tutorials::encodersFeedback_<ContainerAllocator> >
   {
     return "float64 first\n"
 "float64 second\n"
-"float64 base\n"
+"float64 base=0\n"
 ;
   }
 
@@ -181,7 +190,6 @@ namespace serialization
     {
       stream.next(m.first);
       stream.next(m.second);
-      stream.next(m.base);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -204,8 +212,6 @@ struct Printer< ::beginner_tutorials::encodersFeedback_<ContainerAllocator> >
     Printer<double>::stream(s, indent + "  ", v.first);
     s << indent << "second: ";
     Printer<double>::stream(s, indent + "  ", v.second);
-    s << indent << "base: ";
-    Printer<double>::stream(s, indent + "  ", v.base);
   }
 };
 

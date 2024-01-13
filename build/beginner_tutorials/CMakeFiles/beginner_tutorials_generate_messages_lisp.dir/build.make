@@ -57,6 +57,9 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/s
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/anglesMsg.lisp
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/encodersFeedback.lisp
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/speedMsg.lisp
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/RoverMsg.lisp
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/roboticArmController.lisp
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/example.lisp
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/angles.lisp
 
@@ -81,14 +84,29 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp: /home/s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from beginner_tutorials/speedMsg.msg"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg
 
+/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/RoverMsg.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/RoverMsg.lisp: /home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from beginner_tutorials/RoverMsg.msg"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg
+
+/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/roboticArmController.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/roboticArmController.lisp: /home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from beginner_tutorials/roboticArmController.msg"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg
+
+/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/example.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/example.lisp: /home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from beginner_tutorials/example.msg"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg
+
 /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp: /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from beginner_tutorials/AddTwoInts.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from beginner_tutorials/AddTwoInts.srv"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv
 
 /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/angles.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/angles.lisp: /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from beginner_tutorials/angles.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Lisp code from beginner_tutorials/angles.srv"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv
 
 beginner_tutorials_generate_messages_lisp: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp
@@ -96,6 +114,9 @@ beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/com
 beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/anglesMsg.lisp
 beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/encodersFeedback.lisp
 beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/speedMsg.lisp
+beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/RoverMsg.lisp
+beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/roboticArmController.lisp
+beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/example.lisp
 beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp
 beginner_tutorials_generate_messages_lisp: /home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/angles.lisp
 beginner_tutorials_generate_messages_lisp: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/build.make

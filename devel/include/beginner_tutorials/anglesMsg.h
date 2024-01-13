@@ -26,17 +26,19 @@ struct anglesMsg_
   anglesMsg_()
     : first(0.0)
     , second(0.0)
-    , base(0)
+    , base(0.0)
     , servo1(0)
     , servo2(0)
+    , servo3(0)
     , isPump(false)  {
     }
   anglesMsg_(const ContainerAllocator& _alloc)
     : first(0.0)
     , second(0.0)
-    , base(0)
+    , base(0.0)
     , servo1(0)
     , servo2(0)
+    , servo3(0)
     , isPump(false)  {
   (void)_alloc;
     }
@@ -49,7 +51,7 @@ struct anglesMsg_
    typedef double _second_type;
   _second_type second;
 
-   typedef uint8_t _base_type;
+   typedef double _base_type;
   _base_type base;
 
    typedef int64_t _servo1_type;
@@ -57,6 +59,9 @@ struct anglesMsg_
 
    typedef int64_t _servo2_type;
   _servo2_type servo2;
+
+   typedef int64_t _servo3_type;
+  _servo3_type servo3;
 
    typedef uint8_t _isPump_type;
   _isPump_type isPump;
@@ -95,6 +100,7 @@ bool operator==(const ::beginner_tutorials::anglesMsg_<ContainerAllocator1> & lh
     lhs.base == rhs.base &&
     lhs.servo1 == rhs.servo1 &&
     lhs.servo2 == rhs.servo2 &&
+    lhs.servo3 == rhs.servo3 &&
     lhs.isPump == rhs.isPump;
 }
 
@@ -152,12 +158,12 @@ struct MD5Sum< ::beginner_tutorials::anglesMsg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "926bd9e23b51251f5bd37bbd4418b9f6";
+    return "6b8e0d4ccdce3065f67c69afb3a3bac4";
   }
 
   static const char* value(const ::beginner_tutorials::anglesMsg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x926bd9e23b51251fULL;
-  static const uint64_t static_value2 = 0x5bd37bbd4418b9f6ULL;
+  static const uint64_t static_value1 = 0x6b8e0d4ccdce3065ULL;
+  static const uint64_t static_value2 = 0xf67c69afb3a3bac4ULL;
 };
 
 template<class ContainerAllocator>
@@ -178,9 +184,10 @@ struct Definition< ::beginner_tutorials::anglesMsg_<ContainerAllocator> >
   {
     return "float64 first\n"
 "float64 second\n"
-"char base\n"
+"float64 base\n"
 "int64 servo1 \n"
 "int64 servo2\n"
+"int64 servo3\n"
 "bool isPump\n"
 ;
   }
@@ -205,6 +212,7 @@ namespace serialization
       stream.next(m.base);
       stream.next(m.servo1);
       stream.next(m.servo2);
+      stream.next(m.servo3);
       stream.next(m.isPump);
     }
 
@@ -229,11 +237,13 @@ struct Printer< ::beginner_tutorials::anglesMsg_<ContainerAllocator> >
     s << indent << "second: ";
     Printer<double>::stream(s, indent + "  ", v.second);
     s << indent << "base: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.base);
+    Printer<double>::stream(s, indent + "  ", v.base);
     s << indent << "servo1: ";
     Printer<int64_t>::stream(s, indent + "  ", v.servo1);
     s << indent << "servo2: ";
     Printer<int64_t>::stream(s, indent + "  ", v.servo2);
+    s << indent << "servo3: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.servo3);
     s << indent << "isPump: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.isPump);
   }

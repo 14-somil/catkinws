@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "beginner_tutorials: 4 messages, 2 services")
+message(STATUS "beginner_tutorials: 7 messages, 2 services")
 
 set(MSG_I_FLAGS "-Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -35,6 +35,21 @@ add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg" NAME_WE)
 add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg" ""
+)
+
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg" NAME_WE)
+add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg" ""
+)
+
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg" NAME_WE)
+add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg" ""
+)
+
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg" NAME_WE)
+add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg" ""
 )
 
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
@@ -77,6 +92,24 @@ _generate_msg_cpp(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_cpp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_cpp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_cpp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_cpp(beginner_tutorials
@@ -111,6 +144,12 @@ add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_ge
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
@@ -150,6 +189,24 @@ _generate_msg_eus(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_eus(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_eus(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_eus(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_eus(beginner_tutorials
@@ -184,6 +241,12 @@ add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_ge
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
@@ -223,6 +286,24 @@ _generate_msg_lisp(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_lisp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_lisp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_lisp(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_lisp(beginner_tutorials
@@ -257,6 +338,12 @@ add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_g
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
@@ -296,6 +383,24 @@ _generate_msg_nodejs(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_nodejs(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_nodejs(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_nodejs(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_nodejs(beginner_tutorials
@@ -330,6 +435,12 @@ add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
@@ -369,6 +480,24 @@ _generate_msg_py(beginner_tutorials
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
 )
+_generate_msg_py(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_py(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
+)
+_generate_msg_py(beginner_tutorials
+  "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 _generate_srv_py(beginner_tutorials
@@ -403,6 +532,12 @@ add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_gen
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/encodersFeedback.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})

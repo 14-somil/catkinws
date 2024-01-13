@@ -8,14 +8,17 @@ import struct
 
 
 class encodersFeedback(genpy.Message):
-  _md5sum = "0745d61b2a4b159f25fc57eee55861a2"
+  _md5sum = "7506f42907eb3eaefadf3e0d4485e175"
   _type = "beginner_tutorials/encodersFeedback"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64 first
 float64 second
-float64 base"""
-  __slots__ = ['first','second','base']
-  _slot_types = ['float64','float64','float64']
+float64 base=0"""
+  # Pseudo-constants
+  base = 0.0
+
+  __slots__ = ['first','second']
+  _slot_types = ['float64','float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +28,7 @@ float64 base"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       first,second,base
+       first,second
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -38,12 +41,9 @@ float64 base"""
         self.first = 0.
       if self.second is None:
         self.second = 0.
-      if self.base is None:
-        self.base = 0.
     else:
       self.first = 0.
       self.second = 0.
-      self.base = 0.
 
   def _get_types(self):
     """
@@ -58,7 +58,7 @@ float64 base"""
     """
     try:
       _x = self
-      buff.write(_get_struct_3d().pack(_x.first, _x.second, _x.base))
+      buff.write(_get_struct_2d().pack(_x.first, _x.second))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -73,8 +73,8 @@ float64 base"""
       end = 0
       _x = self
       start = end
-      end += 24
-      (_x.first, _x.second, _x.base,) = _get_struct_3d().unpack(str[start:end])
+      end += 16
+      (_x.first, _x.second,) = _get_struct_2d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -88,7 +88,7 @@ float64 base"""
     """
     try:
       _x = self
-      buff.write(_get_struct_3d().pack(_x.first, _x.second, _x.base))
+      buff.write(_get_struct_2d().pack(_x.first, _x.second))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -104,8 +104,8 @@ float64 base"""
       end = 0
       _x = self
       start = end
-      end += 24
-      (_x.first, _x.second, _x.base,) = _get_struct_3d().unpack(str[start:end])
+      end += 16
+      (_x.first, _x.second,) = _get_struct_2d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -114,9 +114,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_3d = None
-def _get_struct_3d():
-    global _struct_3d
-    if _struct_3d is None:
-        _struct_3d = struct.Struct("<3d")
-    return _struct_3d
+_struct_2d = None
+def _get_struct_2d():
+    global _struct_2d
+    if _struct_2d is None:
+        _struct_2d = struct.Struct("<2d")
+    return _struct_2d

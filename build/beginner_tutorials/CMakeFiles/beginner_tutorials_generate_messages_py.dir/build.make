@@ -57,6 +57,9 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/som
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_anglesMsg.py
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_encodersFeedback.py
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_speedMsg.py
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_RoverMsg.py
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_roboticArmController.py
+beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_example.py
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_angles.py
 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py
@@ -83,14 +86,29 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/som
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG beginner_tutorials/speedMsg"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/somil/catkin_ws/src/beginner_tutorials/msg/speedMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg
 
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_RoverMsg.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_RoverMsg.py: /home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG beginner_tutorials/RoverMsg"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/somil/catkin_ws/src/beginner_tutorials/msg/RoverMsg.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg
+
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_roboticArmController.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_roboticArmController.py: /home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python from MSG beginner_tutorials/roboticArmController"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/somil/catkin_ws/src/beginner_tutorials/msg/roboticArmController.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg
+
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_example.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_example.py: /home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python from MSG beginner_tutorials/example"
+	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/somil/catkin_ws/src/beginner_tutorials/msg/example.msg -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg
+
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_AddTwoInts.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_AddTwoInts.py: /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV beginner_tutorials/AddTwoInts"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python code from SRV beginner_tutorials/AddTwoInts"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/somil/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv
 
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_angles.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_angles.py: /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV beginner_tutorials/angles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python code from SRV beginner_tutorials/angles"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/somil/catkin_ws/src/beginner_tutorials/srv/angles.srv -Ibeginner_tutorials:/home/somil/catkin_ws/src/beginner_tutorials/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv
 
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
@@ -98,9 +116,12 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/som
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_anglesMsg.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_encodersFeedback.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_speedMsg.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_RoverMsg.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_roboticArmController.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_example.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_angles.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python msg __init__.py for beginner_tutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Python msg __init__.py for beginner_tutorials"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg --initpy
 
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
@@ -108,9 +129,12 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/som
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_anglesMsg.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_encodersFeedback.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_speedMsg.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_RoverMsg.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_roboticArmController.py
+/home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_example.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
 /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/__init__.py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_angles.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python srv __init__.py for beginner_tutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Python srv __init__.py for beginner_tutorials"
 	cd /home/somil/catkin_ws/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv --initpy
 
 beginner_tutorials_generate_messages_py: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py
@@ -118,6 +142,9 @@ beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3
 beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_anglesMsg.py
 beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_encodersFeedback.py
 beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_speedMsg.py
+beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_RoverMsg.py
+beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_roboticArmController.py
+beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/_example.py
 beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
 beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/srv/_angles.py
 beginner_tutorials_generate_messages_py: /home/somil/catkin_ws/devel/lib/python3/dist-packages/beginner_tutorials/msg/__init__.py

@@ -20,7 +20,6 @@ class encodersFeedback {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.first = null;
       this.second = null;
-      this.base = null;
     }
     else {
       if (initObj.hasOwnProperty('first')) {
@@ -35,12 +34,6 @@ class encodersFeedback {
       else {
         this.second = 0.0;
       }
-      if (initObj.hasOwnProperty('base')) {
-        this.base = initObj.base
-      }
-      else {
-        this.base = 0.0;
-      }
     }
   }
 
@@ -50,8 +43,6 @@ class encodersFeedback {
     bufferOffset = _serializer.float64(obj.first, buffer, bufferOffset);
     // Serialize message field [second]
     bufferOffset = _serializer.float64(obj.second, buffer, bufferOffset);
-    // Serialize message field [base]
-    bufferOffset = _serializer.float64(obj.base, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -63,13 +54,11 @@ class encodersFeedback {
     data.first = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [second]
     data.second = _deserializer.float64(buffer, bufferOffset);
-    // Deserialize message field [base]
-    data.base = _deserializer.float64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 24;
+    return 16;
   }
 
   static datatype() {
@@ -79,7 +68,7 @@ class encodersFeedback {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '0745d61b2a4b159f25fc57eee55861a2';
+    return '7506f42907eb3eaefadf3e0d4485e175';
   }
 
   static messageDefinition() {
@@ -87,7 +76,7 @@ class encodersFeedback {
     return `
     float64 first
     float64 second
-    float64 base
+    float64 base=0
     `;
   }
 
@@ -111,15 +100,13 @@ class encodersFeedback {
       resolved.second = 0.0
     }
 
-    if (msg.base !== undefined) {
-      resolved.base = msg.base;
-    }
-    else {
-      resolved.base = 0.0
-    }
-
     return resolved;
     }
 };
+
+// Constants for message
+encodersFeedback.Constants = {
+  BASE: 0.0,
+}
 
 module.exports = encodersFeedback;

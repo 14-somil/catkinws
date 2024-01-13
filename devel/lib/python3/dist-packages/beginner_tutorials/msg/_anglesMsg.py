@@ -8,17 +8,18 @@ import struct
 
 
 class anglesMsg(genpy.Message):
-  _md5sum = "926bd9e23b51251f5bd37bbd4418b9f6"
+  _md5sum = "6b8e0d4ccdce3065f67c69afb3a3bac4"
   _type = "beginner_tutorials/anglesMsg"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64 first
 float64 second
-char base
+float64 base
 int64 servo1 
 int64 servo2
+int64 servo3
 bool isPump"""
-  __slots__ = ['first','second','base','servo1','servo2','isPump']
-  _slot_types = ['float64','float64','char','int64','int64','bool']
+  __slots__ = ['first','second','base','servo1','servo2','servo3','isPump']
+  _slot_types = ['float64','float64','float64','int64','int64','int64','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -28,7 +29,7 @@ bool isPump"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       first,second,base,servo1,servo2,isPump
+       first,second,base,servo1,servo2,servo3,isPump
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -42,19 +43,22 @@ bool isPump"""
       if self.second is None:
         self.second = 0.
       if self.base is None:
-        self.base = 0
+        self.base = 0.
       if self.servo1 is None:
         self.servo1 = 0
       if self.servo2 is None:
         self.servo2 = 0
+      if self.servo3 is None:
+        self.servo3 = 0
       if self.isPump is None:
         self.isPump = False
     else:
       self.first = 0.
       self.second = 0.
-      self.base = 0
+      self.base = 0.
       self.servo1 = 0
       self.servo2 = 0
+      self.servo3 = 0
       self.isPump = False
 
   def _get_types(self):
@@ -70,7 +74,7 @@ bool isPump"""
     """
     try:
       _x = self
-      buff.write(_get_struct_2dB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
+      buff.write(_get_struct_3d3qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.servo3, _x.isPump))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -85,8 +89,8 @@ bool isPump"""
       end = 0
       _x = self
       start = end
-      end += 34
-      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2dB2qB().unpack(str[start:end])
+      end += 49
+      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.servo3, _x.isPump,) = _get_struct_3d3qB().unpack(str[start:end])
       self.isPump = bool(self.isPump)
       return self
     except struct.error as e:
@@ -101,7 +105,7 @@ bool isPump"""
     """
     try:
       _x = self
-      buff.write(_get_struct_2dB2qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump))
+      buff.write(_get_struct_3d3qB().pack(_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.servo3, _x.isPump))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -117,8 +121,8 @@ bool isPump"""
       end = 0
       _x = self
       start = end
-      end += 34
-      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.isPump,) = _get_struct_2dB2qB().unpack(str[start:end])
+      end += 49
+      (_x.first, _x.second, _x.base, _x.servo1, _x.servo2, _x.servo3, _x.isPump,) = _get_struct_3d3qB().unpack(str[start:end])
       self.isPump = bool(self.isPump)
       return self
     except struct.error as e:
@@ -128,9 +132,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2dB2qB = None
-def _get_struct_2dB2qB():
-    global _struct_2dB2qB
-    if _struct_2dB2qB is None:
-        _struct_2dB2qB = struct.Struct("<2dB2qB")
-    return _struct_2dB2qB
+_struct_3d3qB = None
+def _get_struct_3d3qB():
+    global _struct_3d3qB
+    if _struct_3d3qB is None:
+        _struct_3d3qB = struct.Struct("<3d3qB")
+    return _struct_3d3qB

@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(final_rover_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/somil/catkin_ws/devel/include " STREQUAL " ")
   set(final_rover_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/somil/catkin_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(final_rover_EXPORTED_TARGETS "")
+set(final_rover_EXPORTED_TARGETS "final_rover_generate_messages_cpp;final_rover_generate_messages_eus;final_rover_generate_messages_lisp;final_rover_generate_messages_nodejs;final_rover_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${final_rover_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${final_rover_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "roscpp;rospy;std_msgs;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(final_rover_EXPORTED_TARGETS ${${final_rover_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "final_rover-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${final_rover_DIR}/${extra})

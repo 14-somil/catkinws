@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 from visual_kinematics.RobotSerial import *
 import numpy as np
 from math import pi 
@@ -48,7 +47,7 @@ rospy.init_node('robotic_arm_control')
 rospy.loginfo('Started....')
 pub = rospy.Publisher('/input', anglesMsg, queue_size=10)
 rospy.Subscriber('/angleFeedback', encodersFeedback, subCallback)
-r = rospy.Rate(100)
+r = rospy.Rate(10)
 
 def on_key_press(key):
     global robot, target, x, y, z, angle, speed, Button

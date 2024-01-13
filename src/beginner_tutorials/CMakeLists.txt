@@ -54,6 +54,9 @@ find_package(catkin REQUIRED COMPONENTS
    anglesMsg.msg
    encodersFeedback.msg
    speedMsg.msg
+   RoverMsg.msg
+   roboticArmController.msg
+   example.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -182,6 +185,7 @@ catkin_install_python(
   scripts/teleop_ps3.py
   scripts/teleop.py
   scripts/teleop_v2.py
+  scripts/teleop_v3.py
   scripts/d_turtlesim.py
   scripts/talker.py 
   scripts/listener.py

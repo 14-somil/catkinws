@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/Num.lisp"
+  "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/RoverMsg.lisp"
   "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/anglesMsg.lisp"
   "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/encodersFeedback.lisp"
+  "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/example.lisp"
+  "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/roboticArmController.lisp"
   "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/speedMsg.lisp"
   "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp"
   "/home/somil/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/angles.lisp"

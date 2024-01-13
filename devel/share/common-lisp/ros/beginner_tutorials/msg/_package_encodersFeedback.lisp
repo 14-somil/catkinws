@@ -3,6 +3,4 @@
           FIRST
           SECOND-VAL
           SECOND
-          BASE-VAL
-          BASE
 ))

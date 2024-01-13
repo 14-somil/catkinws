@@ -23,6 +23,7 @@ class anglesMsg {
       this.base = null;
       this.servo1 = null;
       this.servo2 = null;
+      this.servo3 = null;
       this.isPump = null;
     }
     else {
@@ -42,7 +43,7 @@ class anglesMsg {
         this.base = initObj.base
       }
       else {
-        this.base = 0;
+        this.base = 0.0;
       }
       if (initObj.hasOwnProperty('servo1')) {
         this.servo1 = initObj.servo1
@@ -55,6 +56,12 @@ class anglesMsg {
       }
       else {
         this.servo2 = 0;
+      }
+      if (initObj.hasOwnProperty('servo3')) {
+        this.servo3 = initObj.servo3
+      }
+      else {
+        this.servo3 = 0;
       }
       if (initObj.hasOwnProperty('isPump')) {
         this.isPump = initObj.isPump
@@ -72,11 +79,13 @@ class anglesMsg {
     // Serialize message field [second]
     bufferOffset = _serializer.float64(obj.second, buffer, bufferOffset);
     // Serialize message field [base]
-    bufferOffset = _serializer.char(obj.base, buffer, bufferOffset);
+    bufferOffset = _serializer.float64(obj.base, buffer, bufferOffset);
     // Serialize message field [servo1]
     bufferOffset = _serializer.int64(obj.servo1, buffer, bufferOffset);
     // Serialize message field [servo2]
     bufferOffset = _serializer.int64(obj.servo2, buffer, bufferOffset);
+    // Serialize message field [servo3]
+    bufferOffset = _serializer.int64(obj.servo3, buffer, bufferOffset);
     // Serialize message field [isPump]
     bufferOffset = _serializer.bool(obj.isPump, buffer, bufferOffset);
     return bufferOffset;
@@ -91,18 +100,20 @@ class anglesMsg {
     // Deserialize message field [second]
     data.second = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [base]
-    data.base = _deserializer.char(buffer, bufferOffset);
+    data.base = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [servo1]
     data.servo1 = _deserializer.int64(buffer, bufferOffset);
     // Deserialize message field [servo2]
     data.servo2 = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [servo3]
+    data.servo3 = _deserializer.int64(buffer, bufferOffset);
     // Deserialize message field [isPump]
     data.isPump = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 34;
+    return 49;
   }
 
   static datatype() {
@@ -112,7 +123,7 @@ class anglesMsg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '926bd9e23b51251f5bd37bbd4418b9f6';
+    return '6b8e0d4ccdce3065f67c69afb3a3bac4';
   }
 
   static messageDefinition() {
@@ -120,9 +131,10 @@ class anglesMsg {
     return `
     float64 first
     float64 second
-    char base
+    float64 base
     int64 servo1 
     int64 servo2
+    int64 servo3
     bool isPump
     `;
   }
@@ -151,7 +163,7 @@ class anglesMsg {
       resolved.base = msg.base;
     }
     else {
-      resolved.base = 0
+      resolved.base = 0.0
     }
 
     if (msg.servo1 !== undefined) {
@@ -166,6 +178,13 @@ class anglesMsg {
     }
     else {
       resolved.servo2 = 0
+    }
+
+    if (msg.servo3 !== undefined) {
+      resolved.servo3 = msg.servo3;
+    }
+    else {
+      resolved.servo3 = 0
     }
 
     if (msg.isPump !== undefined) {

@@ -1,9 +1,8 @@
-from math import pi
+import cv2
 
-angle = {'first':180,
-         'second':0,
-         'base':0}
-        
-angle_rad = angle *pi/180
+cap = cv2.VideoCapture(2)
 
-print(angle_rad)
+while True:
+    _,frame = cap.read()
+    cv2.imshow('bhfdbf', frame)
+    cv2.waitKey(10)
