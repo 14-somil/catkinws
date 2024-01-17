@@ -54,6 +54,11 @@ CMAKE_BINARY_DIR = /home/somil/catkin_ws/build
 include final_rover/CMakeFiles/final_rover_generate_messages_eus.dir/progress.make
 
 final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/GPS.l
+final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/RoverMsg.l
+final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/armClient.l
+final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/anglesMsg.l
+final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/encodersFeedback.l
+final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/roverServer.l
 final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/manifest.l
 
 
@@ -62,12 +67,42 @@ final_rover/CMakeFiles/final_rover_generate_messages_eus: /home/somil/catkin_ws/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from final_rover/GPS.msg"
 	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/final_rover/msg/GPS.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg
 
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/RoverMsg.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/RoverMsg.l: /home/somil/catkin_ws/src/final_rover/msg/RoverMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from final_rover/RoverMsg.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/final_rover/msg/RoverMsg.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/armClient.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/armClient.l: /home/somil/catkin_ws/src/final_rover/msg/armClient.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from final_rover/armClient.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/final_rover/msg/armClient.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/anglesMsg.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/anglesMsg.l: /home/somil/catkin_ws/src/final_rover/msg/anglesMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from final_rover/anglesMsg.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/final_rover/msg/anglesMsg.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/encodersFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/encodersFeedback.l: /home/somil/catkin_ws/src/final_rover/msg/encodersFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from final_rover/encodersFeedback.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/final_rover/msg/encodersFeedback.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/roverServer.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/roverServer.l: /home/somil/catkin_ws/src/final_rover/msg/roverServer.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from final_rover/roverServer.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/somil/catkin_ws/src/final_rover/msg/roverServer.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg
+
 /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for final_rover"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp manifest code for final_rover"
 	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/somil/catkin_ws/devel/share/roseus/ros/final_rover final_rover std_msgs
 
 final_rover_generate_messages_eus: final_rover/CMakeFiles/final_rover_generate_messages_eus
 final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/GPS.l
+final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/RoverMsg.l
+final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/armClient.l
+final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/anglesMsg.l
+final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/encodersFeedback.l
+final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/msg/roverServer.l
 final_rover_generate_messages_eus: /home/somil/catkin_ws/devel/share/roseus/ros/final_rover/manifest.l
 final_rover_generate_messages_eus: final_rover/CMakeFiles/final_rover_generate_messages_eus.dir/build.make
 

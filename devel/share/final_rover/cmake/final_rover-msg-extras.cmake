@@ -1,2 +1,2 @@
-set(final_rover_MESSAGE_FILES "/home/somil/catkin_ws/src/final_rover/msg/GPS.msg")
+set(final_rover_MESSAGE_FILES "/home/somil/catkin_ws/src/final_rover/msg/GPS.msg;/home/somil/catkin_ws/src/final_rover/msg/RoverMsg.msg;/home/somil/catkin_ws/src/final_rover/msg/armClient.msg;/home/somil/catkin_ws/src/final_rover/msg/anglesMsg.msg;/home/somil/catkin_ws/src/final_rover/msg/encodersFeedback.msg;/home/somil/catkin_ws/src/final_rover/msg/roverServer.msg")
 set(final_rover_SERVICE_FILES "")

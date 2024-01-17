@@ -4,8 +4,28 @@ import pickle
 import cv2
 import sys
 import struct
+import rospy
+from final_rover.msg import GPS
+
+latitude = 0
+longitude = 0
+altitude = 0
+
+count = 1
+
+def callback_gps(msg):
+    global latitude, longitude, altitude
+
+    latitude = msg.latitude
+    longitude = msg.longitude
+    altitude = msg.altitude
+
+rospy.init_node('camera')
+rospy.Subscriber('/GPS_client', GPS, callback_gps)
 
 def main():
+    global latitude, longitude, altitude, count
+
     HOST = str(sys.argv[1])
     PORT = int(sys.argv[2])
 
@@ -17,7 +37,7 @@ def main():
     data = b""
     payload_size = struct.calcsize("Q")
 
-    image_path = './images/'
+    image_path = '/home/somil/rover_images/'
 
     while True:
         try:
@@ -33,7 +53,7 @@ def main():
             frame_data = data[:msg_size]
             data  = data[msg_size:]
             frame = pickle.loads(frame_data)
-            frame = cv2.resize(frame,None, fx=2, fy=2)
+            frame = cv2.resize(frame,None, fx=4, fy=4)
             cv2.imshow("Receiving..."+str(sys.argv[3]),frame)
             key = cv2.waitKey(10) 
             if key  == 13:
@@ -42,9 +62,13 @@ def main():
                 height, width, channel = frame.shape
                 if(width/height >=3):
                     cropped_frame = frame[0:int(height), 0:int(width/2)]
-                    cropped_frame = cv2.putText(cropped_frame, str(time.time()), (50,50), 1, 2, (255,0,0),2)
-                    cv2.imwrite(image_path + 'img_' + str(int(time.time())) + '.png', cropped_frame)
-                    print('Image saved as '+image_path + 'img_' + str(int(time.time())) + '.png')
+
+                    text_to_print = 'latitude: ' + str(latitude) + ', longitude: ' + str(longitude) + ', altitude: ' + str(altitude)
+                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1.5, (255,0,0),1.5)
+
+                    cv2.imwrite(image_path + 'img_' + str(int(count)) + '.png', cropped_frame)
+                    print('Image saved as '+image_path + 'img_' + str(int(count)) + '.png')
+                    count+=1
 
         except:
             break

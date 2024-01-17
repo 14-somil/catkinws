@@ -38,7 +38,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/final_rover/msg" TYPE FILE FILES "/home/somil/catkin_ws/src/final_rover/msg/GPS.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/final_rover/msg" TYPE FILE FILES
+    "/home/somil/catkin_ws/src/final_rover/msg/GPS.msg"
+    "/home/somil/catkin_ws/src/final_rover/msg/RoverMsg.msg"
+    "/home/somil/catkin_ws/src/final_rover/msg/armClient.msg"
+    "/home/somil/catkin_ws/src/final_rover/msg/anglesMsg.msg"
+    "/home/somil/catkin_ws/src/final_rover/msg/encodersFeedback.msg"
+    "/home/somil/catkin_ws/src/final_rover/msg/roverServer.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -113,6 +120,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/rover_keyboard_control.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/gps.py")
 endif()
 

@@ -51,6 +51,11 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   GPS.msg
+  RoverMsg.msg
+  armClient.msg
+  anglesMsg.msg
+  encodersFeedback.msg
+  roverServer.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -166,7 +171,7 @@ catkin_install_python(PROGRAMS
   scripts/server_video.py
   scripts/client_open_cam.py
   scripts/server_open_cam.py
-  scripts/rover_keyboard_control.py
+  scripts/gps.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

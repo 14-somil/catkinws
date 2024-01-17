@@ -54,6 +54,11 @@ CMAKE_BINARY_DIR = /home/somil/catkin_ws/build
 include final_rover/CMakeFiles/final_rover_generate_messages_nodejs.dir/progress.make
 
 final_rover/CMakeFiles/final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/GPS.js
+final_rover/CMakeFiles/final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/RoverMsg.js
+final_rover/CMakeFiles/final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/armClient.js
+final_rover/CMakeFiles/final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/anglesMsg.js
+final_rover/CMakeFiles/final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/encodersFeedback.js
+final_rover/CMakeFiles/final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/roverServer.js
 
 
 /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/GPS.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +66,38 @@ final_rover/CMakeFiles/final_rover_generate_messages_nodejs: /home/somil/catkin_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from final_rover/GPS.msg"
 	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/final_rover/msg/GPS.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg
 
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/RoverMsg.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/RoverMsg.js: /home/somil/catkin_ws/src/final_rover/msg/RoverMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from final_rover/RoverMsg.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/final_rover/msg/RoverMsg.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/armClient.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/armClient.js: /home/somil/catkin_ws/src/final_rover/msg/armClient.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from final_rover/armClient.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/final_rover/msg/armClient.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/anglesMsg.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/anglesMsg.js: /home/somil/catkin_ws/src/final_rover/msg/anglesMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from final_rover/anglesMsg.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/final_rover/msg/anglesMsg.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/encodersFeedback.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/encodersFeedback.js: /home/somil/catkin_ws/src/final_rover/msg/encodersFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from final_rover/encodersFeedback.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/final_rover/msg/encodersFeedback.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg
+
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/roverServer.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/roverServer.js: /home/somil/catkin_ws/src/final_rover/msg/roverServer.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/somil/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from final_rover/roverServer.msg"
+	cd /home/somil/catkin_ws/build/final_rover && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/somil/catkin_ws/src/final_rover/msg/roverServer.msg -Ifinal_rover:/home/somil/catkin_ws/src/final_rover/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p final_rover -o /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg
+
 final_rover_generate_messages_nodejs: final_rover/CMakeFiles/final_rover_generate_messages_nodejs
 final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/GPS.js
+final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/RoverMsg.js
+final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/armClient.js
+final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/anglesMsg.js
+final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/encodersFeedback.js
+final_rover_generate_messages_nodejs: /home/somil/catkin_ws/devel/share/gennodejs/ros/final_rover/msg/roverServer.js
 final_rover_generate_messages_nodejs: final_rover/CMakeFiles/final_rover_generate_messages_nodejs.dir/build.make
 
 .PHONY : final_rover_generate_messages_nodejs

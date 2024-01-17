@@ -3,7 +3,7 @@ import subprocess
 import struct
 
 def main():
-    HOST = '127.0.1.1'
+    HOST = '192.168.1.22'
     PORT = 7070
 
     print(HOST,':',PORT)

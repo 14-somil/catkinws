@@ -6,7 +6,7 @@ import time
 
 
 def main():
-    HOST = '127.0.1.1'
+    HOST = '127.0.0.1'
     PORT = 7070
 
     print(HOST,':',PORT)
@@ -39,8 +39,11 @@ def main():
             command = 'python3 /home/somil/catkin_ws/src/final_rover/scripts/server_open_cam.py ' + HOST + ' ' + str(PORT+i+1)+ ' '+ str(i)
             subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
         
+        command = 'python3 /home/somil/catkin_ws/src/final_rover/scripts/server_video_zed.py ' + HOST + ' ' + str(PORT+camera_list[-1]+3)+ ' '+ str(camera_list[-1] + 2)
+        subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
         time.sleep(2)
 
+        camera_list.append(camera_list[-1]+2)
 
         for i in camera_list:
             message = struct.pack("Q", i)

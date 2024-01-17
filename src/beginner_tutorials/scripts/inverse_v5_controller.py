@@ -58,7 +58,7 @@ dh_params = np.array([[4.5,4.0,-0.5*pi,0.5*pi],
 robot = RobotSerial(dh_params)
 
 def publisher():
-    global pub,x_z,y, target, pitch, yaw, gripper
+    global pub,x_z,y, target, pitch, yaw, gripper, iskill
 
     r = rospy.Rate(100)
     while not iskill:
@@ -95,7 +95,7 @@ def gotoPos2():
     isPreset = False
 
 def controller():
-    global x_z, y, joystick, iskill, pitch, yaw, gripper
+    global x_z, y, joystick, iskill, pitch, yaw, gripper, isPreset
 
     while True:
         pygame.event.pump()
@@ -127,12 +127,16 @@ def controller():
 
         if(x >0.5):
             x_z = 'w'
+            isPreset = False
         elif(x <-0.5):
             x_z = 's'
+            isPreset = False
         elif(z == 1):
             x_z = '8'
+            isPreset = False
         elif(z == -1):
             x_z = '2'
+            isPreset = False
         else:
             x_z = 'c'
         
@@ -218,7 +222,7 @@ def main():
         elif(not isPreset):
             target = angles
 
-            
+    
 
 if __name__ == '__main__':
     main()

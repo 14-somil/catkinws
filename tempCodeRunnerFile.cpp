@@ -1,8 +1,9 @@
 #include <iostream>
 #include <conio.h>
 
-int main()
-{
-    std::cout<<getch();
+using namespace std;
+
+int main(){
+    cout<<getch();
     return 0;
 }

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/somil/catkin_ws/src/final_rover/msg/GPS.msg"
+messages_str = "/home/somil/catkin_ws/src/final_rover/msg/GPS.msg;/home/somil/catkin_ws/src/final_rover/msg/RoverMsg.msg;/home/somil/catkin_ws/src/final_rover/msg/armClient.msg;/home/somil/catkin_ws/src/final_rover/msg/anglesMsg.msg;/home/somil/catkin_ws/src/final_rover/msg/encodersFeedback.msg;/home/somil/catkin_ws/src/final_rover/msg/roverServer.msg"
 services_str = ""
 pkg_name = "final_rover"
 dependencies_str = "std_msgs"
