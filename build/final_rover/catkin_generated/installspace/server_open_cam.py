@@ -5,6 +5,7 @@ import struct
 import sys
 
 def main():
+    print('server_open_cam.py')
     HOST = str(sys.argv[1]) 
     PORT = int(sys.argv[2])
 

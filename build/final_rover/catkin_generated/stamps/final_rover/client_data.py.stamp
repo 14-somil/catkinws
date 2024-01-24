@@ -4,11 +4,12 @@ import json
 import rospy
 from final_rover.msg import RoverMsg, armClient, GPS
 from std_msgs.msg import Int16
-
+print('client_data.py')
 data_to_send = {
     'rover':{
         'x':0,
-        'y':0
+        'y':0,
+        'isPID':False
     },
     'arm':{
         'y':0,
@@ -37,6 +38,7 @@ def callback_rover(data):
 
     data_to_send['rover']['x'] = data.x
     data_to_send['rover']['y'] = data.y
+    data_to_send['rover']['isPID'] = data.isPID
 
 def callback_arm(data):
     global data_to_send

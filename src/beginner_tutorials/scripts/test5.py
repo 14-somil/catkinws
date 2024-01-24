@@ -1,5 +1,6 @@
 import pygame
 import time
+import sys
 
 # Initialize pygame
 pygame.init()
@@ -10,12 +11,15 @@ width, height = 800, 600
 # pygame.display.set_caption("PS4 Controller Input")
 
 # Initialize the joystick
-joystick = None
-for i in range(pygame.joystick.get_count()):
-    if "Wireless Controller" in pygame.joystick.Joystick(i).get_name():  # Adjust the name as needed
-        joystick = pygame.joystick.Joystick(i)
-        joystick.init()
-
+if (pygame.joystick.get_count() == 0):
+    print('No joystick found.')
+    sys.exit()
+# joystick = None
+# for i in range(pygame.joystick.get_count()):
+#     if "Wireless Controller" in pygame.joystick.Joystick(i).get_name():  # Adjust the name as needed
+#         joystick = pygame.joystick.Joystick(i)
+#         joystick.init()
+joystick = pygame.joystick.Joystick(0)
 # Main loop
 running = True
 while running:

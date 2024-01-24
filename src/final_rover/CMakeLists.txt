@@ -165,13 +165,19 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
+  scripts/arm_client.py
+  scripts/arm_server.py
+  scripts/chassis_client.py
+  scripts/chassis_server.py
   scripts/client_data.py
-  scripts/server_data.py
-  scripts/client_video.py
-  scripts/server_video.py
   scripts/client_open_cam.py
-  scripts/server_open_cam.py
+  scripts/client_video.py
   scripts/gps.py
+  scripts/launch_client.py
+  scripts/launch_server.py
+  scripts/server_open_cam.py
+  scripts/server_video_zed.py
+  scripts/server_video.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

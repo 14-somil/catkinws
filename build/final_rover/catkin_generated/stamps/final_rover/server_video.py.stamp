@@ -6,6 +6,7 @@ import time
 
 
 def main():
+    print('server_video.py')
     HOST = '127.0.0.1'
     PORT = 7070
 
@@ -36,10 +37,10 @@ def main():
         print("Available camera indices:", camera_list)
 
         for i in camera_list:
-            command = 'python3 /home/somil/catkin_ws/src/final_rover/scripts/server_open_cam.py ' + HOST + ' ' + str(PORT+i+1)+ ' '+ str(i)
+            command = 'rosrun final_rover server_open_cam.py ' + HOST + ' ' + str(PORT+i+1)+ ' '+ str(i)
             subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
         
-        command = 'python3 /home/somil/catkin_ws/src/final_rover/scripts/server_video_zed.py ' + HOST + ' ' + str(PORT+camera_list[-1]+3)+ ' '+ str(camera_list[-1] + 2)
+        command = 'rosrun final_rover server_video_zed.py ' + HOST + ' ' + str(PORT+camera_list[-1]+3)+ ' '+ str(camera_list[-1] + 2)
         subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
         time.sleep(2)
 

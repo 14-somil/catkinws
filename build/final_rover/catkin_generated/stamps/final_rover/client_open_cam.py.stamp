@@ -24,6 +24,7 @@ rospy.init_node('camera')
 rospy.Subscriber('/GPS_client', GPS, callback_gps)
 
 def main():
+    print('client_open_cam.py')
     global latitude, longitude, altitude, count
 
     HOST = str(sys.argv[1])

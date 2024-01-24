@@ -3,7 +3,8 @@ import subprocess
 import struct
 
 def main():
-    HOST = '192.168.1.22'
+    print('client_video.py')
+    HOST = '127.0.0.1'
     PORT = 7070
 
     print(HOST,':',PORT)
@@ -26,7 +27,7 @@ def main():
         temp = struct.unpack("Q",packed_msg_size)[0]
         try:
             print(temp)
-            command = 'python3 /home/somil/catkin_ws/src/final_rover/scripts/client_open_cam.py '+ HOST + ' ' + str(PORT+1+int(temp))+ ' ' +str(temp)
+            command = 'rosrun final_rover client_open_cam.py '+ HOST + ' ' + str(PORT+1+int(temp))+ ' ' +str(temp)
             subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
         except:
             break

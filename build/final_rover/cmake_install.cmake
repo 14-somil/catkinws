@@ -96,19 +96,23 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/arm_client.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/arm_server.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/chassis_client.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/chassis_server.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/client_data.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/server_data.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/client_video.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/server_video.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -116,10 +120,30 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/server_open_cam.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/client_video.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/gps.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/launch_client.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/launch_server.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/server_open_cam.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/server_video_zed.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/final_rover" TYPE PROGRAM FILES "/home/somil/catkin_ws/build/final_rover/catkin_generated/installspace/server_video.py")
 endif()
 

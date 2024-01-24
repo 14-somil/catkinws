@@ -40,7 +40,8 @@ def update_csv_values(file_path, new_values):
         writer.writerow(new_values)
 
 def main():
-    file_name=str(random.randint(0, 10000))
+    print('gps.py')
+    file_name= str(random.randint(0, 10000))
     print(file_name)
     # file_name="1"
     csv_file_path = '/home/somil/Documents/'+file_name+'.csv'
@@ -72,10 +73,10 @@ def main():
         string = dynamic_element.text
         length = len(string)
         half=int(3*length/4)
-        str=string[half:length]
-        index_1=str.find("LOCATION")
-        index_2=str.find("ALTITUDE")
-        str1=str[index_1+9:index_2-1]
+        str0=string[half:length]
+        index_1=str0.find("LOCATION")
+        index_2=str0.find("ALTITUDE")
+        str1=str0[index_1+9:index_2-1]
 
         i=0
         while True:
@@ -91,8 +92,8 @@ def main():
         print(longitude)
         print(latitude)
 
-        index_3=str.find("Ubiquiti")
-        str2=str[index_2+9:index_3-1]
+        index_3=str0.find("Ubiquiti")
+        str2=str0[index_2+9:index_3-1]
         j=0
         while True:
             if str2[j]==' ':

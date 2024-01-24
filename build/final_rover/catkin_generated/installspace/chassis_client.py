@@ -23,13 +23,10 @@ if joystick_count == 0:
     pygame.quit()
     sys.exit()
 
-joystick = None
-# for i in range(joystick_count):
-#     if 'Xbox 360 Controller' in pygame.joystick.Joystick(i).get_name():
-#         joystick = pygame.joystick.Joystick(i)
-#         joystick.init()
+# Initialize the first joystick
 joystick = pygame.joystick.Joystick(0)
 joystick.init()
+
 print("Joystick detected:", joystick.get_name())
 
 axes=[0,0]
@@ -61,7 +58,7 @@ def main():
 
         x = x_no_pid + x_pid_neg + x_pid_pos
 
-        if(pid_neg_button == 1 or pid_pos_button == 1 or x_pid_neg != 0 or x_pid_pos != 0):
+        if(pid_neg_button == 1 or pid_pos_button == 1):
             isPID = True
         else:
             isPID = False
