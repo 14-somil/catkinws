@@ -5,6 +5,7 @@ import time
 commands  = ['roscore',
                 'rosrun final_rover client_data.py',
                 'rosrun final_rover client_video.py',
+                'rosrun final_rover gps.py',
                 'rosrun final_rover arm_client.py',
                 'rosrun final_rover chassis_client.py'
 ]

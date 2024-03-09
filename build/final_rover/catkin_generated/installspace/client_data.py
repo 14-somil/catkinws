@@ -24,13 +24,17 @@ data_to_send = {
     }
 }
 
-recieved_dict = {
-    'time':0,
-    'GPS':{
-        'latitude':0,
-        'longitude':0,
-        'altitude':0
+recieved_dict={
+    "time":time.time(),
+    'science':{
+        'pressure':0,
+        'soil_moisture':0
     }
+    # 'GPS':{
+    #     'latitude':0,
+    #     'longitude':0,
+    #     'altitude':0
+    # }
 }
 
 def callback_rover(data):
@@ -57,14 +61,14 @@ def callback_science(data):
 
     data_to_send['science']['step'] = data.data
 
-HOST = '127.0.0.1'
+HOST = '192.168.1.22'
 PORT = 9090
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
 
 rospy.init_node('client_master')
-pub_gps = rospy.Publisher('/GPS_client', GPS, queue_size=10)
+# pub_gps = rospy.Publisher('/GPS_client', GPS, queue_size=10)
 rospy.Subscriber('/rover_client', RoverMsg, callback_rover)
 rospy.Subscriber('/arm_client', armClient, callback_arm)
 rospy.Subscriber('/science_client', Int16, callback_science)
@@ -78,8 +82,8 @@ while True:
     recieved_dict = json.loads(recieved_message)
     print(recieved_dict)    
 
-    msgToSend_gps = GPS(float(recieved_dict['GPS']['latitude']), float(recieved_dict['GPS']['longitude']), float(recieved_dict['GPS']['altitude']))
-    pub_gps.publish(msgToSend_gps)
+    # msgToSend_gps = GPS(float(recieved_dict['GPS']['latitude']), float(recieved_dict['GPS']['longitude']), float(recieved_dict['GPS']['altitude']))
+    # pub_gps.publish(msgToSend_gps)
     
     time.sleep(0.1)
 

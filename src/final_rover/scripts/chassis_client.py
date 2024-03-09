@@ -28,7 +28,7 @@ joystick = None
 #     if 'Xbox 360 Controller' in pygame.joystick.Joystick(i).get_name():
 #         joystick = pygame.joystick.Joystick(i)
 #         joystick.init()
-joystick = pygame.joystick.Joystick(0)
+joystick = pygame.joystick.Joystick(1)
 joystick.init()
 print("Joystick detected:", joystick.get_name())
 
@@ -66,7 +66,7 @@ def main():
         else:
             isPID = False
         
-        y = joystick.get_axis(0)
+        y = -joystick.get_axis(0)
         kill = joystick.get_button(0)
         speed_reduce = joystick.get_button(4)
         speed_increase = joystick.get_button(5)
@@ -89,7 +89,7 @@ def main():
             iskill = True
             sys.exit()
         
-        axes=[k*x, 1.75*k*y]
+        axes=[k*x, 2.5*k*y]
 
 if __name__=='__main__':
     main()

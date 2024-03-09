@@ -3,7 +3,7 @@ import socket
 import struct
 import subprocess
 import time
-
+import threading
 
 def main():
     HOST = '127.0.0.1'
@@ -52,15 +52,13 @@ def main():
                 communication_socket, address = server.accept()
                 print(f"connected to {address}")
 
+                thread_object = []
                 for i in camera_list:
-                    command = 'python3 /home/riya/catkin_ws/src/final_rover/scripts/server_open_cam.py ' + HOST + ' ' + str(PORT+i+1)+ ' '+ str(i)
-                    subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
-                
-                # command = 'python3 /home/riya/catkin_ws/src/final_rover/scripts/server_video_zed.py ' + HOST + ' ' + str(PORT+camera_list[-1]+3)+ ' '+ str(camera_list[-1] + 2)
-                # subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
-                time.sleep(2)
+                    path = '/home/somil/catkin_ws/src/final_rover/scripts/server_open_cam.py' ##+ HOST + ' ' + str(PORT+i+1)+ ' '+ str(i)
+                    thread_object.append(threading.Thread(target=subprocess.run, args=(['python3', path, str(HOST), str(PORT+1+i), str(i)])))
 
-                # camera_list.append(camera_list[-1]+2)
+                    thread_object[i].start()
+                time.sleep(2)
 
                 for i in camera_list:
                     message = struct.pack("Q", i)

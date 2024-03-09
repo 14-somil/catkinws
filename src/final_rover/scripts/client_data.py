@@ -61,7 +61,7 @@ def callback_science(data):
 
     data_to_send['science']['step'] = data.data
 
-HOST = '127.0.0.1'
+HOST = '192.168.1.22'
 PORT = 9090
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

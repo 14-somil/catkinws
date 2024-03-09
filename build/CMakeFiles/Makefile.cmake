@@ -104,6 +104,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/somil/catkin_ws/src/final_rover/scripts/arm_server.py"
   "/home/somil/catkin_ws/src/final_rover/scripts/chassis_client.py"
   "/home/somil/catkin_ws/src/final_rover/scripts/chassis_server.py"
+  "/home/somil/catkin_ws/src/final_rover/scripts/client1_video.py"
+  "/home/somil/catkin_ws/src/final_rover/scripts/client2_video.py"
   "/home/somil/catkin_ws/src/final_rover/scripts/client_data.py"
   "/home/somil/catkin_ws/src/final_rover/scripts/client_open_cam.py"
   "/home/somil/catkin_ws/src/final_rover/scripts/client_video.py"

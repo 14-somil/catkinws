@@ -172,6 +172,8 @@ catkin_install_python(PROGRAMS
   scripts/client_data.py
   scripts/client_open_cam.py
   scripts/client_video.py
+  scripts/client1_video.py
+  scripts/client2_video.py
   scripts/gps.py
   scripts/launch_client.py
   scripts/launch_server.py

@@ -61,7 +61,7 @@ def main():
         pygame.event.pump()
 
         y = 60 * joystick.get_axis(0)
-        x = -joystick.get_axis(1)
+        x = +joystick.get_axis(1)
         pitch = -50 * joystick.get_axis(4)
         yaw = 100 * joystick.get_axis(3)
         z = joystick.get_hat(0)[1]

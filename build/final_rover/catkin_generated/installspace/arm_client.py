@@ -29,7 +29,14 @@ if joystick_count == 0:
     print("No joysticks found.")
     pygame.quit()
     sys.exit()
-joystick = pygame.joystick.Joystick(0)
+
+joystick = None
+# for i in range(joystick_count):
+#     if 'Wireless Controller' in pygame.joystick.Joystick(i).get_name():
+#         joystick = pygame.joystick.Joystick(i)
+#         joystick.init()
+
+joystick = pygame.joystick.Joystick(1)
 joystick.init()
 print("Joystick detected:", joystick.get_name())
 
@@ -53,10 +60,10 @@ def main():
     while(True):
         pygame.event.pump()
 
-        y = 255 * joystick.get_axis(0)
-        x = -joystick.get_axis(1)
-        pitch = -255 * joystick.get_axis(4)
-        yaw = 255 * joystick.get_axis(3)
+        y = 60 * joystick.get_axis(0)
+        x = +joystick.get_axis(1)
+        pitch = -50 * joystick.get_axis(4)
+        yaw = 100 * joystick.get_axis(3)
         z = joystick.get_hat(0)[1]
         gripper = joystick.get_hat(0)[0]
         kill = joystick.get_button(0)
@@ -66,6 +73,8 @@ def main():
         step2 = joystick.get_button(5)
         step3 = joystick.get_button(6)
         step4 = joystick.get_button(7)
+        step3_axis = joystick.get_axis(2)
+        step4_axis = joystick.get_axis(5)
 
         if kill == 1:
             rospy.loginfo('Bye!!!')
@@ -84,9 +93,9 @@ def main():
             step = -40
         elif(step2 == 1):
             step = 40
-        elif(step3 == 1):
+        elif(step3 == 1 or step3_axis != -1):
             step = -10
-        elif(step4 == 1):
+        elif(step4 == 1 or step4_axis != -1):
             step = 10
         else:
             step = 0

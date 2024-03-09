@@ -10,7 +10,7 @@ from final_rover.msg import GPS
 import threading
 
 rospy.init_node('GPS')
-pub = rospy.Publisher('/gps_location', GPS, queue_size=10)
+pub = rospy.Publisher('/GPS_client', GPS, queue_size=10)
 
 longitude =0
 latitude =0

@@ -1,6 +1,7 @@
 import socket 
 import subprocess
 import struct
+import sys
 
 def main():
     print('client_video.py')

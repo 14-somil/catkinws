@@ -77,25 +77,30 @@ pub_science = rospy.Publisher('/science_server', Int16, queue_size=10)
 rospy.Subscriber('/moisture_feedback', Float32, callback_moisture)
 rospy.Subscriber('/zed2i/zed_node/atm_press', FluidPressure, callback_pressure)
 
-server.listen(5) #5 se jyada unaccepted connection ko reject kar dega
-communication_socket, address = server.accept()
-print(f"connected to {address}")
-
 while True:
-    message = communication_socket.recv(1024).decode('utf-8')
-    recieved_data = json.loads(message)
+    try:
+        server.listen(1) #5 se jyada unaccepted connection ko reject kar dega
+        communication_socket, address = server.accept()
+        print(f"connected to {address}")
 
-    rover_msg = RoverMsg(float(recieved_data['rover']['x']), float(recieved_data['rover']['y']), bool(recieved_data['rover']['isPID']))
-    pub_rover.publish(rover_msg)
+        while True:
+            message = communication_socket.recv(1024).decode('utf-8')
+            recieved_data = json.loads(message)
 
-    arm_msg = armClient(float(recieved_data['arm']['y']), ord(recieved_data['arm']['command']), int(recieved_data['arm']['position']), float(recieved_data['arm']['pitch']), float(recieved_data['arm']['yaw']), int(recieved_data['arm']['gripper'])) 
-    pub_arm.publish(arm_msg)
+            rover_msg = RoverMsg(float(recieved_data['rover']['x']), float(recieved_data['rover']['y']), bool(recieved_data['rover']['isPID']))
+            pub_rover.publish(rover_msg)
 
-    science_msg = Int16(recieved_data['science']['step'])
-    pub_science.publish(science_msg)
+            arm_msg = armClient(float(recieved_data['arm']['y']), ord(recieved_data['arm']['command']), int(recieved_data['arm']['position']), float(recieved_data['arm']['pitch']), float(recieved_data['arm']['yaw']), int(recieved_data['arm']['gripper'])) 
+            pub_arm.publish(arm_msg)
 
-    print(recieved_data)
+            science_msg = Int16(recieved_data['science']['step'])
+            pub_science.publish(science_msg)
 
-    data_to_send["time"] = time.time()
-    communication_socket.send(json.dumps(data_to_send).encode('utf-8'))
+            print(recieved_data)
 
+            data_to_send["time"] = time.time()
+            communication_socket.send(json.dumps(data_to_send).encode('utf-8'))
+
+    except:
+        communication_socket.close()
+        continue

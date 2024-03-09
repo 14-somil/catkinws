@@ -7,9 +7,9 @@ import struct
 import rospy
 from final_rover.msg import GPS
 
-latitude = 0
-longitude = 0
-altitude = 0
+latitude = 11.004556
+longitude = 76.961632
+altitude = 425
 
 today_time = int(time.time())
 
@@ -56,7 +56,9 @@ def main():
             frame_data = data[:msg_size]
             data  = data[msg_size:]
             frame = pickle.loads(frame_data)
-            frame = cv2.resize(frame,None, fx=4, fy=4)
+            frame = cv2.resize(frame,None, fx=2, fy=2)
+            text_to_print = 'latitude: ' + str(latitude) + ', longitude: ' + str(longitude) + ', altitude: ' + str(altitude)
+            frame  = cv2.putText(frame, text_to_print, (50,50), 1, 1, (0,0,255),2)
             cv2.imshow("Receiving..."+str(sys.argv[3]),frame)
             key = cv2.waitKey(10) 
             if key  == 13:
@@ -67,7 +69,7 @@ def main():
                     cropped_frame = frame[0:int(height), 0:int(width/2)]
 
                     text_to_print = 'latitude: ' + str(latitude) + ', longitude: ' + str(longitude) + ', altitude: ' + str(altitude)
-                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1.5, (0,0,255),2)
+                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1, (0,0,255),2)
 
                     cv2.imwrite(image_path + 'img_' +str(today_time)+'_'+ str(int(count)) + '.png', cropped_frame)
                     print('Image saved as '+image_path + 'img_' +str(today_time)+'_'+ str(int(count)) + '.png')
@@ -76,7 +78,7 @@ def main():
                     cropped_frame = frame[0:int(height), 0:int(width)]
 
                     text_to_print = 'latitude: ' + str(latitude) + ', longitude: ' + str(longitude) + ', altitude: ' + str(altitude)
-                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1.5, (0,0,255),2)
+                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1, (0,0,255),2)
 
                     cv2.imwrite(image_path + 'img_' +str(today_time)+'_'+ str(sys.argv[3]) + '_' + str(int(count)) + '.png', cropped_frame)
                     print('Image saved as '+image_path + 'img_' +str(today_time)+'_'+ str(sys.argv[3]) + '_' + str(int(count)) + '.png')

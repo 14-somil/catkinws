@@ -11,6 +11,8 @@ latitude = 0
 longitude = 0
 altitude = 0
 
+today_time = int(time.time())
+
 count = 1
 
 def callback_gps(msg):
@@ -20,7 +22,7 @@ def callback_gps(msg):
     longitude = msg.longitude
     altitude = msg.altitude
 
-rospy.init_node('camera')
+rospy.init_node('camera_'+str(sys.argv[3]))
 rospy.Subscriber('/GPS_client', GPS, callback_gps)
 
 def main():
@@ -54,7 +56,7 @@ def main():
             frame_data = data[:msg_size]
             data  = data[msg_size:]
             frame = pickle.loads(frame_data)
-            frame = cv2.resize(frame,None, fx=4, fy=4)
+            frame = cv2.resize(frame,None, fx=2, fy=2)
             cv2.imshow("Receiving..."+str(sys.argv[3]),frame)
             key = cv2.waitKey(10) 
             if key  == 13:
@@ -65,12 +67,20 @@ def main():
                     cropped_frame = frame[0:int(height), 0:int(width/2)]
 
                     text_to_print = 'latitude: ' + str(latitude) + ', longitude: ' + str(longitude) + ', altitude: ' + str(altitude)
-                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1.5, (255,0,0),1.5)
+                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1.5, (0,0,255),2)
 
-                    cv2.imwrite(image_path + 'img_' + str(int(count)) + '.png', cropped_frame)
-                    print('Image saved as '+image_path + 'img_' + str(int(count)) + '.png')
-                    count+=1
+                    cv2.imwrite(image_path + 'img_' +str(today_time)+'_'+ str(int(count)) + '.png', cropped_frame)
+                    print('Image saved as '+image_path + 'img_' +str(today_time)+'_'+ str(int(count)) + '.png')
 
+                elif(width/height >=1):
+                    cropped_frame = frame[0:int(height), 0:int(width)]
+
+                    text_to_print = 'latitude: ' + str(latitude) + ', longitude: ' + str(longitude) + ', altitude: ' + str(altitude)
+                    cropped_frame = cv2.putText(cropped_frame, text_to_print, (50,50), 1, 1.5, (0,0,255),2)
+
+                    cv2.imwrite(image_path + 'img_' +str(today_time)+'_'+ str(sys.argv[3]) + '_' + str(int(count)) + '.png', cropped_frame)
+                    print('Image saved as '+image_path + 'img_' +str(today_time)+'_'+ str(sys.argv[3]) + '_' + str(int(count)) + '.png')
+                count+=1
         except:
             break
     client.close()   

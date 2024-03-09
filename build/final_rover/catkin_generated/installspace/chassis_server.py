@@ -49,18 +49,18 @@ publisher_thread.start()
 def main():
     print('chassis_server.py')
     global x,y,left,right,yaw,reference_angle, isPID
+    while True:
+        if(isPID == False):
+            left = x+y
+            right = x-y
+            reference_angle = yaw
+        
+        else:
+            diff = reference_angle - yaw
+            correction = 19*diff*x
 
-    if(isPID == False):
-        left = x+y
-        right = x-y
-        reference_angle = yaw
-    
-    else:
-        diff = reference_angle - yaw
-        correction = 19*diff*x
-
-        right = x+correction
-        left = x-correction
+            right = x+correction
+            left = x-correction
 
 
 if __name__ == '__main__':
