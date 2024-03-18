@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libvolta_joy_teleop.so -o /home/somil/catkin_ws/devel/lib/libvolta_joy_teleop.so CMakeFiles/volta_joy_teleop.dir/src/joy_teleop.cpp.o 

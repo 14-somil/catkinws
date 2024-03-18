@@ -53,7 +53,7 @@ def main():
                 print(f"connected to {address}")
 
                 for i in camera_list:
-                    command = 'python3 /home/riya/catkin_ws/src/final_rover/scripts/server_open_cam.py ' + HOST + ' ' + str(PORT+i+1)+ ' '+ str(i)
+                    command = 'python3 /home/somil/catkin_ws/src/final_rover/scripts/server_open_cam.py ' + HOST + ' ' + str(PORT+i+1)+ ' '+ str(i)
                     subprocess.call(['gnome-terminal', '--', 'bash', '-c', command])
                 
                 # command = 'python3 /home/riya/catkin_ws/src/final_rover/scripts/server_video_zed.py ' + HOST + ' ' + str(PORT+camera_list[-1]+3)+ ' '+ str(camera_list[-1] + 2)

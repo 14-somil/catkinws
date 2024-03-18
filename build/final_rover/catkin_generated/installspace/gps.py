@@ -12,9 +12,9 @@ import threading
 rospy.init_node('GPS')
 pub = rospy.Publisher('/GPS_client', GPS, queue_size=10)
 
-longitude =0
-latitude =0
-altitude =0
+latitude = 11.004556
+longitude = 76.961632
+altitude = 425
 
 def publisher():
     global pub, longitude, latitude, altitude

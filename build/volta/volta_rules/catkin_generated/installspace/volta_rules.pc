@@ -1,0 +1,8 @@
+prefix=/home/somil/catkin_ws/install
+
+Name: volta_rules
+Description: Description of volta_rules
+Version: 1.1.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

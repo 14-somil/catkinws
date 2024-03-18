@@ -785,6 +785,9 @@ actionlib_DIR:PATH=/opt/ros/noetic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/noetic/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for angles.
+angles_DIR:PATH=/opt/ros/noetic/share/angles/cmake
+
 //Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/beginner_tutorials
 
@@ -833,6 +836,21 @@ ccd_DIR:PATH=ccd_DIR-NOTFOUND
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
 
+//The directory containing a CMake configuration file for cmake_modules.
+cmake_modules_DIR:PATH=/opt/ros/noetic/share/cmake_modules/cmake
+
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/noetic/share/control_msgs/cmake
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/opt/ros/noetic/share/controller_interface/cmake
+
+//The directory containing a CMake configuration file for controller_manager.
+controller_manager_DIR:PATH=/opt/ros/noetic/share/controller_manager/cmake
+
+//The directory containing a CMake configuration file for controller_manager_msgs.
+controller_manager_msgs_DIR:PATH=/opt/ros/noetic/share/controller_manager_msgs/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
@@ -848,8 +866,14 @@ diagnostic_msgs_DIR:PATH=/opt/ros/noetic/share/diagnostic_msgs/cmake
 //The directory containing a CMake configuration file for diagnostic_updater.
 diagnostic_updater_DIR:PATH=/opt/ros/noetic/share/diagnostic_updater/cmake
 
+//The directory containing a CMake configuration file for diff_drive_controller.
+diff_drive_controller_DIR:PATH=/opt/ros/noetic/share/diff_drive_controller/cmake
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
+
+//The directory containing a CMake configuration file for eigen_conversions.
+eigen_conversions_DIR:PATH=/opt/ros/noetic/share/eigen_conversions/cmake
 
 //Value Computed by CMake
 final_rover_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/final_rover
@@ -886,6 +910,9 @@ gennodejs_DIR:PATH=/opt/ros/noetic/share/gennodejs/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/noetic/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geographic_msgs.
+geographic_msgs_DIR:PATH=/opt/ros/noetic/share/geographic_msgs/cmake
 
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/noetic/share/geometry_msgs/cmake
@@ -936,6 +963,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/noetic/share/hardware_interface/cmake
+
 //The directory containing a CMake configuration file for ignition-cmake2.
 ignition-cmake2_DIR:PATH=/usr/share/cmake/ignition-cmake2
 
@@ -959,6 +989,9 @@ ignition-transport8_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-transport8
 
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
+
+//The directory containing a CMake configuration file for joint_state_controller.
+joint_state_controller_DIR:PATH=/opt/ros/noetic/share/joint_state_controller/cmake
 
 //The directory containing a CMake configuration file for jsoncpp.
 jsoncpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/jsoncpp
@@ -1064,6 +1097,12 @@ realsense2_description_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/realsense-r
 
 //Value Computed by CMake
 realsense2_description_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/realsense-ros/realsense2_description
+
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/opt/ros/noetic/share/realtime_tools/cmake
+
+//The directory containing a CMake configuration file for robot_localization.
+robot_localization_DIR:PATH=/opt/ros/noetic/share/robot_localization/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -1218,8 +1257,17 @@ std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/noetic/share/std_srvs/cmake
 
+//The directory containing a CMake configuration file for teleop_twist_joy.
+teleop_twist_joy_DIR:PATH=/opt/ros/noetic/share/teleop_twist_joy/cmake
+
+//The directory containing a CMake configuration file for teleop_twist_keyboard.
+teleop_twist_keyboard_DIR:PATH=/opt/ros/noetic/share/teleop_twist_keyboard/cmake
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_geometry_msgs.
+tf2_geometry_msgs_DIR:PATH=/opt/ros/noetic/share/tf2_geometry_msgs/cmake
 
 //The directory containing a CMake configuration file for tf2_msgs.
 tf2_msgs_DIR:PATH=/opt/ros/noetic/share/tf2_msgs/cmake
@@ -1259,6 +1307,66 @@ turtlebot3_simulations_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/turtlebot3_
 
 //Value Computed by CMake
 turtlebot3_simulations_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/turtlebot3_simulations/turtlebot3_simulations
+
+//The directory containing a CMake configuration file for twist_mux.
+twist_mux_DIR:PATH=/opt/ros/noetic/share/twist_mux/cmake
+
+//The directory containing a CMake configuration file for uuid_msgs.
+uuid_msgs_DIR:PATH=/opt/ros/noetic/share/uuid_msgs/cmake
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
+
+//Value Computed by CMake
+volta_base_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_base
+
+//Value Computed by CMake
+volta_base_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_base
+
+//Value Computed by CMake
+volta_control_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_control
+
+//Value Computed by CMake
+volta_control_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_control
+
+//Value Computed by CMake
+volta_description_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_description
+
+//Value Computed by CMake
+volta_description_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_description
+
+//Value Computed by CMake
+volta_localization_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_localization
+
+//Value Computed by CMake
+volta_localization_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_localization
+
+//Value Computed by CMake
+volta_msgs_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_msgs
+
+//The directory containing a CMake configuration file for volta_msgs.
+volta_msgs_DIR:PATH=/home/somil/catkin_ws/devel/share/volta_msgs/cmake
+
+//Value Computed by CMake
+volta_msgs_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_msgs
+
+//Value Computed by CMake
+volta_navigation_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_navigation
+
+//Value Computed by CMake
+volta_navigation_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_navigation
+
+//Value Computed by CMake
+volta_rules_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_rules
+
+//Value Computed by CMake
+volta_rules_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_rules
+
+//Value Computed by CMake
+volta_teleoperator_BINARY_DIR:STATIC=/home/somil/catkin_ws/build/volta/volta_teleoperator
+
+//Value Computed by CMake
+volta_teleoperator_SOURCE_DIR:STATIC=/home/somil/catkin_ws/src/volta/volta_teleoperator
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake

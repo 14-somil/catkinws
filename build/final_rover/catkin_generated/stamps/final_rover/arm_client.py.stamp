@@ -36,7 +36,7 @@ joystick = None
 #         joystick = pygame.joystick.Joystick(i)
 #         joystick.init()
 
-joystick = pygame.joystick.Joystick(1)
+joystick = pygame.joystick.Joystick(0)
 joystick.init()
 print("Joystick detected:", joystick.get_name())
 

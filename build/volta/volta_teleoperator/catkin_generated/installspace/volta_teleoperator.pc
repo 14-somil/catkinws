@@ -1,0 +1,8 @@
+prefix=/home/somil/catkin_ws/install
+
+Name: volta_teleoperator
+Description: Description of volta_teleoperator
+Version: 1.1.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ljoy_teleop
+Requires: 

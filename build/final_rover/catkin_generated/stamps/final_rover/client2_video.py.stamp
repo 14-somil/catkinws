@@ -5,8 +5,8 @@ import sys
 
 def main():
     print('client_video.py')
-    HOST = '192.168.1.22'
-    PORT = 7070
+    HOST = '192.168.1.23'
+    PORT = 7080
 
     print(HOST,':',PORT)
 
